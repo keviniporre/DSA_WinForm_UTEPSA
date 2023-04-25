@@ -1,0 +1,17 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\bin\Debug\net6.0-windows\E7_Calculator.exe
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\bin\Debug\net6.0-windows\E7_Calculator.deps.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\bin\Debug\net6.0-windows\E7_Calculator.runtimeconfig.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\bin\Debug\net6.0-windows\E7_Calculator.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\bin\Debug\net6.0-windows\E7_Calculator.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.Form1.resources
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.csproj.GenerateResource.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\refint\E7_Calculator.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\E7_Calculator.genruntimeconfig.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E7_Calculator\obj\Debug\net6.0-windows\ref\E7_Calculator.dll
