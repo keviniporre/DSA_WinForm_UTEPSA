@@ -150,6 +150,7 @@
             button5.TabIndex = 10;
             button5.Text = "CE";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // label5
             // 
@@ -175,6 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = button5;
             ClientSize = new Size(318, 216);
             Controls.Add(label6);
             Controls.Add(label5);

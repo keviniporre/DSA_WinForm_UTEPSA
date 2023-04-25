@@ -49,5 +49,13 @@ namespace E7_Calculator
             if (isN1biggerThanN2()) { label6.Text = Convert.ToString(calculate.division()); }
             else { setLabelToNotBigger(); }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            label6.Text = "0";
+            textBox1.Focus();
+        }
     }
 }
