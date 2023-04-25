@@ -1,0 +1,17 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\bin\Debug\net6.0-windows\E6_Temperature_Converter.exe
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\bin\Debug\net6.0-windows\E6_Temperature_Converter.deps.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\bin\Debug\net6.0-windows\E6_Temperature_Converter.runtimeconfig.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\bin\Debug\net6.0-windows\E6_Temperature_Converter.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\bin\Debug\net6.0-windows\E6_Temperature_Converter.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.Form1.resources
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.csproj.GenerateResource.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\refint\E6_Temperature_Converter.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\E6_Temperature_Converter.genruntimeconfig.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E6_Temperature_Converter\obj\Debug\net6.0-windows\ref\E6_Temperature_Converter.dll
