@@ -5,6 +5,8 @@ namespace Transparent_Basic_Form
         public Form1()
         {
             InitializeComponent();
+            textBox1.Focus();
+            MessageBox.Show("Hello");
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -20,6 +22,13 @@ namespace Transparent_Basic_Form
         private void label1_MouseLeave(object sender, EventArgs e)
         {
             label1.ForeColor = Color.DarkGray;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
+            this.Hide();
         }
     }
 }
