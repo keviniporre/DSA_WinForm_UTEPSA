@@ -12,12 +12,12 @@ namespace FinalProject_DSA_UTEPSA
         private string id, name, instructor, category, length, language;
 
         //Declaracion Metodos SET
-        private void setId(string id) { this.id = id; }
-        private void setName(string name) { this.name = name; }
-        private void setInstructor(string instructor) { this.instructor = instructor; }
-        private void setCategory(string category) {  this.category = category; }
-        private void setLength(string length) {  this.length = length; }
-        private void setLanguage(string language) {  this.language = language; }
+        public void setId(string id) { this.id = id; }
+        public void setName(string name) { this.name = name; }
+        public void setInstructor(string instructor) { this.instructor = instructor; }
+        public void setCategory(string category) {  this.category = category; }
+        public void setLength(string length) {  this.length = length; }
+        public void setLanguage(string language) {  this.language = language; }
         
         //Declaracion Metodos GET
         public string getId() { return this.id; }

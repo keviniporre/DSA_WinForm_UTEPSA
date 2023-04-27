@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FinalProject_DSA_UTEPSA
 {
-    public class queueClass
+    public class queueClass:valueClass
     {
+        public void clearBoxes(TextBox textBox)
+        {
+            textBox.Text = "";
+        }
     }
 }

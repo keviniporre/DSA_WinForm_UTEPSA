@@ -1,0 +1,17 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\bin\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.exe
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\bin\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.deps.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\bin\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.runtimeconfig.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\bin\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\bin\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.Form1.resources
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.csproj.GenerateResource.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\refint\FinalProject_DSA_UTEPSA.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\FinalProject_DSA_UTEPSA.genruntimeconfig.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\FinalProject_DSA_UTEPSA\obj\Debug\net6.0-windows\ref\FinalProject_DSA_UTEPSA.dll
