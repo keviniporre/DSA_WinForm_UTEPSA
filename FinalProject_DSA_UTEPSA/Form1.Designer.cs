@@ -49,12 +49,12 @@
             button5 = new Button();
             label8 = new Label();
             label9 = new Label();
-            ID = new DataGridViewTextBoxColumn();
-            Name = new DataGridViewTextBoxColumn();
-            Instructor = new DataGridViewTextBoxColumn();
-            Category = new DataGridViewTextBoxColumn();
-            Length = new DataGridViewTextBoxColumn();
-            Language = new DataGridViewTextBoxColumn();
+            HID = new DataGridViewTextBoxColumn();
+            HName = new DataGridViewTextBoxColumn();
+            HInstructor = new DataGridViewTextBoxColumn();
+            HCategory = new DataGridViewTextBoxColumn();
+            HLength = new DataGridViewTextBoxColumn();
+            HLanguage = new DataGridViewTextBoxColumn();
             dataGridView2 = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
@@ -176,7 +176,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Name, Instructor, Category, Length, Language });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { HID, HName, HInstructor, HCategory, HLength, HLanguage });
             dataGridView1.Location = new Point(52, 271);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -218,6 +218,7 @@
             button4.TabIndex = 17;
             button4.Text = "Search";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -249,33 +250,33 @@
             // 
             // ID
             // 
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
+            HID.HeaderText = "ID";
+            HID.Name = "ID";
             // 
             // Name
             // 
-            Name.HeaderText = "Name";
-            Name.Name = "Name";
+            HName.HeaderText = "Name";
+            HName.Name = "Name";
             // 
             // Instructor
             // 
-            Instructor.HeaderText = "Instructor";
-            Instructor.Name = "Instructor";
+            HInstructor.HeaderText = "Instructor";
+            HInstructor.Name = "Instructor";
             // 
             // Category
             // 
-            Category.HeaderText = "Category";
-            Category.Name = "Category";
+            HCategory.HeaderText = "Category";
+            HCategory.Name = "Category";
             // 
             // Length
             // 
-            Length.HeaderText = "Length";
-            Length.Name = "Length";
+            HLength.HeaderText = "Length";
+            HLength.Name = "Length";
             // 
             // Language
             // 
-            Language.HeaderText = "Language";
-            Language.Name = "Language";
+            HLanguage.HeaderText = "Language";
+            HLanguage.Name = "Language";
             // 
             // dataGridView2
             // 
@@ -376,12 +377,12 @@
         private Button button5;
         private Label label8;
         private Label label9;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn Instructor;
-        private DataGridViewTextBoxColumn Category;
-        private DataGridViewTextBoxColumn Length;
-        private DataGridViewTextBoxColumn Language;
+        private DataGridViewTextBoxColumn HID;
+        private DataGridViewTextBoxColumn HName;
+        private DataGridViewTextBoxColumn HInstructor;
+        private DataGridViewTextBoxColumn HCategory;
+        private DataGridViewTextBoxColumn HLength;
+        private DataGridViewTextBoxColumn HLanguage;
         private DataGridView dataGridView2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

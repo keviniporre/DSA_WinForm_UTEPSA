@@ -73,17 +73,31 @@ namespace FinalProject_DSA_UTEPSA
         //Declaracion Metodo Show de la Data
         public void showQueueItems(DataGridView grid)
         {
-            //Clear/Empty the DataGridView
-            grid.Rows.Clear();
-            grid.Columns.Clear();
-
-
             //Verify if Queue is Empty
             if (this.isQueueEmpty()) { MessageBox.Show("The Queue is Empty!"); }
             else
             {
+                // Populate the rows.
+                string[] row1 = new string[]{"Meatloaf",
+                                            "Main Dish", "boringMeatloaf", "boringMeatloafRanking"};
+                string[] row2 = new string[]{"Key Lime Pie",
+                                            "Dessert", "lime juice, evaporated milk", "****"};
+                string[] row3 = new string[]{"Orange-Salsa Pork Chops",
+                                            "Main Dish", "pork chops, salsa, orange juice", "****"};
+                string[] row4 = new string[]{"Black Bean and Rice Salad",
+                                            "Salad", "black beans, brown rice", "****"};
+                string[] row5 = new string[]{"Chocolate Cheesecake",
+                                            "Dessert", "cream cheese", "***"};
+                string[] row6 = new string[]{"Black Bean Dip", "Appetizer",
+                                            "black beans, sour cream", "***"};
+
+                object[] rows = new object[] { row1, row2, row3, row4, row5, row6 };
+                foreach (string[] rowArray in rows)
+                {
+                    grid.Rows.Add(rowArray);
+                }
                 //Goes through the Queue and fills the cells
-                for (int i = 0; i <= this.last; ++i) { grid.}
+                //for (int i = 0; i <= this.last; ++i) { grid.}
             }
         }
         //Declaracion Metodo que limpia TextBox
