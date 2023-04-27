@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FinalProject_DSA_UTEPSA
 {
@@ -45,8 +46,47 @@ namespace FinalProject_DSA_UTEPSA
         public void deleteItem()
         {
             if (this.isQueueEmpty()) { MessageBox.Show("The Queue is Empty!"); }
-            else { }
+            else
+            {
+                //Move Items position in the Queue
+                for (int i = 0; i < this.last; i++) { this.queueContainer[i] = this.queueContainer[i + 1];}
+                this.queueContainer[this.last] = 0;
+                this.last--;
+                //MessageBox Item Deleted
+                MessageBox.Show("Item successfully deleted");
+            }
         }
+        public void emptyQueue()
+        {
+            if (this.isQueueEmpty()) { MessageBox.Show("The Queue is Empty!"); }
+            else
+            {
+                //Goes through the Queue and sets to 0
+                for (int i = 0; i <= this.last;i++) { this.queueContainer[i] = 0; }
+                //Set default values
+                this.first = 0;
+                this.last = -1;
+            }
+        }
+        //Declaracion Metodo GET de la cola
+        public int[] getQueue() { return this.queueContainer; }
+        //Declaracion Metodo Show de la Data
+        public void showQueueItems(DataGridView grid)
+        {
+            //Clear/Empty the DataGridView
+            grid.Rows.Clear();
+            grid.Columns.Clear();
+
+
+            //Verify if Queue is Empty
+            if (this.isQueueEmpty()) { MessageBox.Show("The Queue is Empty!"); }
+            else
+            {
+                //Goes through the Queue and fills the cells
+                for (int i = 0; i <= this.last; ++i) { grid.}
+            }
+        }
+        //Declaracion Metodo que limpia TextBox
         public void clearBoxes(TextBox textBox)
         {
             textBox.Text = "";
