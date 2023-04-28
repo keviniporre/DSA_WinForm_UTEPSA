@@ -47,5 +47,11 @@ namespace FinalProject_DSA_UTEPSA_v1
         {
             masterQueue.setSelectedIndex(e.RowIndex);
         }
+
+        private void btnEmpty_Click(object sender, EventArgs e)
+        {
+            masterQueue.emptyMatrix(dtgvAll);
+            txtId.Focus();
+        }
     }
 }

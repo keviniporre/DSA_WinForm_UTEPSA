@@ -89,6 +89,28 @@ namespace FinalProject_DSA_UTEPSA_v1
             else { MessageBox.Show("Select a Row to delete");  }
         }
 
+        public void emptyMatrix(DataGridView grid)
+        {
+            this.queueFull=false;
+            grid.Rows.Clear();
+
+            //for (int i = 0; i <= this.last; i++)
+            //{
+            //    grid.Rows.RemoveAt(i);
+            //}
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < this.last; j++)
+                {
+                    this.queueContainer[i,j] = "";
+                }
+            }
+                
+
+            this.last = -1;
+        }
+
         public void clearTextbox(TextBox box) { box.Text = ""; }
     }
 }

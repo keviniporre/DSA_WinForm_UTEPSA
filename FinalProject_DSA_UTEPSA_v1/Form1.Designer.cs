@@ -315,6 +315,7 @@
             btnEmpty.TabIndex = 19;
             btnEmpty.Text = "Empty";
             btnEmpty.UseVisualStyleBackColor = true;
+            btnEmpty.Click += btnEmpty_Click;
             // 
             // btnClear
             // 
