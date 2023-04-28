@@ -81,7 +81,7 @@
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(46, 109);
+            lblId.Location = new Point(28, 107);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 1;
@@ -90,7 +90,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(46, 138);
+            lblName.Location = new Point(28, 136);
             lblName.Name = "lblName";
             lblName.Size = new Size(42, 15);
             lblName.TabIndex = 2;
@@ -99,7 +99,7 @@
             // lblInstructor
             // 
             lblInstructor.AutoSize = true;
-            lblInstructor.Location = new Point(46, 167);
+            lblInstructor.Location = new Point(28, 165);
             lblInstructor.Name = "lblInstructor";
             lblInstructor.Size = new Size(61, 15);
             lblInstructor.TabIndex = 3;
@@ -108,7 +108,7 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(276, 112);
+            lblCategory.Location = new Point(284, 112);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(58, 15);
             lblCategory.TabIndex = 4;
@@ -117,7 +117,7 @@
             // lblLength
             // 
             lblLength.AutoSize = true;
-            lblLength.Location = new Point(276, 141);
+            lblLength.Location = new Point(284, 141);
             lblLength.Name = "lblLength";
             lblLength.Size = new Size(47, 15);
             lblLength.TabIndex = 5;
@@ -126,7 +126,7 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(276, 170);
+            lblPrice.Location = new Point(284, 170);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(36, 15);
             lblPrice.TabIndex = 6;
@@ -134,42 +134,42 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(115, 106);
+            txtId.Location = new Point(97, 104);
             txtId.Name = "txtId";
-            txtId.Size = new Size(113, 23);
+            txtId.Size = new Size(170, 23);
             txtId.TabIndex = 7;
             // 
             // txtName
             // 
-            txtName.Location = new Point(115, 135);
+            txtName.Location = new Point(97, 133);
             txtName.Name = "txtName";
-            txtName.Size = new Size(113, 23);
+            txtName.Size = new Size(170, 23);
             txtName.TabIndex = 8;
             // 
             // txtInstructor
             // 
-            txtInstructor.Location = new Point(115, 164);
+            txtInstructor.Location = new Point(97, 162);
             txtInstructor.Name = "txtInstructor";
-            txtInstructor.Size = new Size(113, 23);
+            txtInstructor.Size = new Size(170, 23);
             txtInstructor.TabIndex = 9;
             // 
             // txtCategory
             // 
-            txtCategory.Location = new Point(345, 109);
+            txtCategory.Location = new Point(353, 109);
             txtCategory.Name = "txtCategory";
             txtCategory.Size = new Size(113, 23);
             txtCategory.TabIndex = 10;
             // 
             // txtLength
             // 
-            txtLength.Location = new Point(345, 138);
+            txtLength.Location = new Point(353, 138);
             txtLength.Name = "txtLength";
             txtLength.Size = new Size(113, 23);
             txtLength.TabIndex = 11;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(345, 167);
+            txtPrice.Location = new Point(353, 167);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(113, 23);
             txtPrice.TabIndex = 12;
@@ -319,21 +319,23 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(394, 217);
+            btnClear.Location = new Point(394, 246);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 23);
             btnClear.TabIndex = 20;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(394, 246);
+            btnSearch.Location = new Point(394, 217);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 21;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
+            btnSearch.Click += btnSearch_Click;
             // 
             // lblMaxLength
             // 

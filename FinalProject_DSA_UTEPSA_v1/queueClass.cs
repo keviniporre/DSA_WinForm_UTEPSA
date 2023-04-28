@@ -13,6 +13,7 @@ namespace FinalProject_DSA_UTEPSA_v1
         private int first, last, maxLength;
         private string[,] queueContainer;
         private bool queueFull = false;
+        public bool isLengthSet = false;
 
         //Declaracion Constructor
         public queueClass(int maxLength)
@@ -21,6 +22,7 @@ namespace FinalProject_DSA_UTEPSA_v1
             this.last = -1;
             this.maxLength = maxLength;
             this.queueContainer = new string[6,maxLength];
+            this.isLengthSet = true;
         }
 
         //Declaracion Metodos Verificadores - True/False
@@ -109,6 +111,32 @@ namespace FinalProject_DSA_UTEPSA_v1
                 
 
             this.last = -1;
+        }
+
+        public int rowIndexOfItem(string idVal)
+        {
+            int rowIndex = -1;
+            for (int i=0; i <= this.last; i++)
+            {
+                if (this.queueContainer[0,i] == idVal) { rowIndex = i; }
+            }
+            return rowIndex;
+        }
+
+        public void showFilteredMatrix(DataGridView grid, int indexOfItem)
+        {
+            grid.Rows.Clear();
+            grid.Rows.Add();
+
+            if (indexOfItem != -1)
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    grid.Rows[0].Cells[i].Value = this.queueContainer[i, indexOfItem];
+                }
+            }
+            else { MessageBox.Show("The Items is not in the matrix"); }
+            
         }
 
         public void clearTextbox(TextBox box) { box.Text = ""; }

@@ -10,25 +10,25 @@ namespace FinalProject_DSA_UTEPSA_v1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            masterQueue.setId(txtId.Text);
-            masterQueue.setName(txtName.Text);
-            masterQueue.setInstructor(txtInstructor.Text);
-            masterQueue.setCategory(txtCategory.Text);
-            masterQueue.setLength(txtLength.Text);
-            masterQueue.setPrice(txtPrice.Text);
+                masterQueue.setId(txtId.Text);
+                masterQueue.setName(txtName.Text);
+                masterQueue.setInstructor(txtInstructor.Text);
+                masterQueue.setCategory(txtCategory.Text);
+                masterQueue.setLength(txtLength.Text);
+                masterQueue.setPrice(txtPrice.Text);
 
-            string[] container = masterQueue.createQueue();
-            masterQueue.insertItem(container);
-            masterQueue.showOnGrid(dtgvAll);
+                string[] container = masterQueue.createQueue();
+                masterQueue.insertItem(container);
+                masterQueue.showOnGrid(dtgvAll);
 
-            masterQueue.clearTextbox(txtId);
-            masterQueue.clearTextbox(txtName);
-            masterQueue.clearTextbox(txtInstructor);
-            masterQueue.clearTextbox(txtCategory);
-            masterQueue.clearTextbox(txtLength);
-            masterQueue.clearTextbox(txtPrice);
+                masterQueue.clearTextbox(txtId);
+                masterQueue.clearTextbox(txtName);
+                masterQueue.clearTextbox(txtInstructor);
+                masterQueue.clearTextbox(txtCategory);
+                masterQueue.clearTextbox(txtLength);
+                masterQueue.clearTextbox(txtPrice);
 
-            txtId.Focus();
+                txtId.Focus();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace FinalProject_DSA_UTEPSA_v1
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            masterQueue.deleteRow(dtgvAll);
+                masterQueue.deleteRow(dtgvAll);
         }
 
         private void dtgvAll_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -50,8 +50,21 @@ namespace FinalProject_DSA_UTEPSA_v1
 
         private void btnEmpty_Click(object sender, EventArgs e)
         {
-            masterQueue.emptyMatrix(dtgvAll);
-            txtId.Focus();
+
+                masterQueue.emptyMatrix(dtgvAll);
+                txtId.Focus();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            dtgvFiltered.Rows.Clear();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            int rowIndex = masterQueue.rowIndexOfItem(txtId.Text);
+            masterQueue.showFilteredMatrix(dtgvFiltered, rowIndex);
+
         }
     }
 }
