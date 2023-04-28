@@ -1,0 +1,17 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\bin\Debug\net6.0-windows\E_SumaCola.exe
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\bin\Debug\net6.0-windows\E_SumaCola.deps.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\bin\Debug\net6.0-windows\E_SumaCola.runtimeconfig.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\bin\Debug\net6.0-windows\E_SumaCola.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\bin\Debug\net6.0-windows\E_SumaCola.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.csproj.AssemblyReference.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.Form1.resources
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.csproj.GenerateResource.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.AssemblyInfoInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.AssemblyInfo.cs
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.csproj.CoreCompileInputs.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\refint\E_SumaCola.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\E_SumaCola.genruntimeconfig.cache
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\E_SumaCola\obj\Debug\net6.0-windows\ref\E_SumaCola.dll
