@@ -62,6 +62,9 @@
             btnEmpty = new Button();
             btnClear = new Button();
             btnSearch = new Button();
+            lblMaxLength = new Label();
+            txtRegister = new TextBox();
+            btnRegister = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgvAll).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFiltered).BeginInit();
             SuspendLayout();
@@ -69,7 +72,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(153, 21);
+            lblTitle.Location = new Point(191, 61);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(132, 15);
             lblTitle.TabIndex = 0;
@@ -78,7 +81,7 @@
             // lblId
             // 
             lblId.AutoSize = true;
-            lblId.Location = new Point(126, 62);
+            lblId.Location = new Point(46, 109);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 1;
@@ -87,7 +90,7 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(126, 91);
+            lblName.Location = new Point(46, 138);
             lblName.Name = "lblName";
             lblName.Size = new Size(42, 15);
             lblName.TabIndex = 2;
@@ -96,7 +99,7 @@
             // lblInstructor
             // 
             lblInstructor.AutoSize = true;
-            lblInstructor.Location = new Point(126, 120);
+            lblInstructor.Location = new Point(46, 167);
             lblInstructor.Name = "lblInstructor";
             lblInstructor.Size = new Size(61, 15);
             lblInstructor.TabIndex = 3;
@@ -105,7 +108,7 @@
             // lblCategory
             // 
             lblCategory.AutoSize = true;
-            lblCategory.Location = new Point(126, 149);
+            lblCategory.Location = new Point(276, 112);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(58, 15);
             lblCategory.TabIndex = 4;
@@ -114,7 +117,7 @@
             // lblLength
             // 
             lblLength.AutoSize = true;
-            lblLength.Location = new Point(126, 178);
+            lblLength.Location = new Point(276, 141);
             lblLength.Name = "lblLength";
             lblLength.Size = new Size(47, 15);
             lblLength.TabIndex = 5;
@@ -123,7 +126,7 @@
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(126, 207);
+            lblPrice.Location = new Point(276, 170);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(36, 15);
             lblPrice.TabIndex = 6;
@@ -131,42 +134,42 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(195, 59);
+            txtId.Location = new Point(115, 106);
             txtId.Name = "txtId";
             txtId.Size = new Size(113, 23);
             txtId.TabIndex = 7;
             // 
             // txtName
             // 
-            txtName.Location = new Point(195, 88);
+            txtName.Location = new Point(115, 135);
             txtName.Name = "txtName";
             txtName.Size = new Size(113, 23);
             txtName.TabIndex = 8;
             // 
             // txtInstructor
             // 
-            txtInstructor.Location = new Point(195, 117);
+            txtInstructor.Location = new Point(115, 164);
             txtInstructor.Name = "txtInstructor";
             txtInstructor.Size = new Size(113, 23);
             txtInstructor.TabIndex = 9;
             // 
             // txtCategory
             // 
-            txtCategory.Location = new Point(195, 146);
+            txtCategory.Location = new Point(345, 109);
             txtCategory.Name = "txtCategory";
             txtCategory.Size = new Size(113, 23);
             txtCategory.TabIndex = 10;
             // 
             // txtLength
             // 
-            txtLength.Location = new Point(195, 175);
+            txtLength.Location = new Point(345, 138);
             txtLength.Name = "txtLength";
             txtLength.Size = new Size(113, 23);
             txtLength.TabIndex = 11;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(195, 204);
+            txtPrice.Location = new Point(345, 167);
             txtPrice.Name = "txtPrice";
             txtPrice.Size = new Size(113, 23);
             txtPrice.TabIndex = 12;
@@ -285,16 +288,17 @@
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(335, 59);
+            btnAdd.Location = new Point(46, 217);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(75, 23);
             btnAdd.TabIndex = 17;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(335, 88);
+            btnDelete.Location = new Point(127, 217);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(75, 23);
             btnDelete.TabIndex = 18;
@@ -303,7 +307,7 @@
             // 
             // btnEmpty
             // 
-            btnEmpty.Location = new Point(335, 117);
+            btnEmpty.Location = new Point(208, 217);
             btnEmpty.Name = "btnEmpty";
             btnEmpty.Size = new Size(75, 23);
             btnEmpty.TabIndex = 19;
@@ -312,7 +316,7 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(335, 175);
+            btnClear.Location = new Point(394, 217);
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(75, 23);
             btnClear.TabIndex = 20;
@@ -321,18 +325,48 @@
             // 
             // btnSearch
             // 
-            btnSearch.Location = new Point(335, 204);
+            btnSearch.Location = new Point(394, 246);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(75, 23);
             btnSearch.TabIndex = 21;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = true;
             // 
+            // lblMaxLength
+            // 
+            lblMaxLength.AutoSize = true;
+            lblMaxLength.Location = new Point(12, 20);
+            lblMaxLength.Name = "lblMaxLength";
+            lblMaxLength.Size = new Size(159, 15);
+            lblMaxLength.TabIndex = 22;
+            lblMaxLength.Text = "Number of Items to Register:";
+            // 
+            // txtRegister
+            // 
+            txtRegister.Location = new Point(177, 17);
+            txtRegister.Name = "txtRegister";
+            txtRegister.Size = new Size(51, 23);
+            txtRegister.TabIndex = 23;
+            // 
+            // btnRegister
+            // 
+            btnRegister.Location = new Point(237, 16);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(75, 23);
+            btnRegister.TabIndex = 24;
+            btnRegister.Text = "Register";
+            btnRegister.UseVisualStyleBackColor = true;
+            btnRegister.Click += btnRegister_Click;
+            // 
             // Form1
             // 
+            AcceptButton = btnAdd;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(501, 629);
+            Controls.Add(btnRegister);
+            Controls.Add(txtRegister);
+            Controls.Add(lblMaxLength);
             Controls.Add(btnSearch);
             Controls.Add(btnClear);
             Controls.Add(btnEmpty);
@@ -399,5 +433,8 @@
         private Button btnEmpty;
         private Button btnClear;
         private Button btnSearch;
+        private Label lblMaxLength;
+        private TextBox txtRegister;
+        private Button btnRegister;
     }
 }
