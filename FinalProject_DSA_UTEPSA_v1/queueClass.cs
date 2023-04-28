@@ -69,13 +69,24 @@ namespace FinalProject_DSA_UTEPSA_v1
         {
             if (!this.queueFull)
             {
-                int n = grid.Rows.Add();
+                grid.Rows.Add();
 
                 for (int i = 0; i < 6; i++)
                 {
-                    grid.Rows[n].Cells[i].Value = this.queueContainer[i, n];
+                    grid.Rows[this.last].Cells[i].Value = this.queueContainer[i, this.last];
                 }
             }
+        }
+
+        public void deleteRow(DataGridView grid)
+        {
+            if (this.getSelectedIndex() != -1) 
+            { 
+                grid.Rows.RemoveAt(this.getSelectedIndex()); 
+                this.queueFull=false;
+                this.last--;
+            }
+            else { MessageBox.Show("Select a Row to delete");  }
         }
 
         public void clearTextbox(TextBox box) { box.Text = ""; }

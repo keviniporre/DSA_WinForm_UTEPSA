@@ -184,6 +184,7 @@
             dtgvAll.RowTemplate.Height = 25;
             dtgvAll.Size = new Size(440, 200);
             dtgvAll.TabIndex = 13;
+            dtgvAll.CellClick += dtgvAll_CellClick;
             // 
             // IdCol
             // 
@@ -304,6 +305,7 @@
             btnDelete.TabIndex = 18;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnEmpty
             // 

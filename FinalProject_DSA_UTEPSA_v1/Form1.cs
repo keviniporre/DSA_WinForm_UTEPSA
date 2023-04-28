@@ -37,5 +37,15 @@ namespace FinalProject_DSA_UTEPSA_v1
             MessageBox.Show("Courses to Register: " + txtRegister.Text);
             txtId.Focus();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            masterQueue.deleteRow(dtgvAll);
+        }
+
+        private void dtgvAll_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            masterQueue.setSelectedIndex(e.RowIndex);
+        }
     }
 }

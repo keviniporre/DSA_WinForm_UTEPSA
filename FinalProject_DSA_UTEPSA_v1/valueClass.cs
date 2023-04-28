@@ -10,6 +10,7 @@ namespace FinalProject_DSA_UTEPSA_v1
     {
         //Declaracion variables/atributos
         private string idVal, nameVal, instructorVal, categoryVal, lengthVal, priceVal;
+        private int selectedIndex;
 
         //Declaracion Metodos SET
         public void setId(string id) { this.idVal = id; }
@@ -18,6 +19,7 @@ namespace FinalProject_DSA_UTEPSA_v1
         public void setCategory(string category) { this.categoryVal = category; }
         public void setLength(string length) { this.lengthVal = length; }
         public void setPrice(string language) { this.priceVal = language; }
+        public void setSelectedIndex(int  index) { this.selectedIndex = index; }
 
         //Declaracion Metodos GET
         public string getId() { return this.idVal; }
@@ -26,6 +28,7 @@ namespace FinalProject_DSA_UTEPSA_v1
         public string getCategory() { return this.categoryVal; }
         public string getLength() { return this.lengthVal; }
         public string getPrice() { return this.priceVal; }
+        public int getSelectedIndex() { return this.selectedIndex; }
 
         //Declaracion Constructor
         public valueClass()
@@ -36,6 +39,7 @@ namespace FinalProject_DSA_UTEPSA_v1
             categoryVal = "";
             lengthVal = "";
             priceVal = "";
+            selectedIndex = -1;
         }
     }
 }
