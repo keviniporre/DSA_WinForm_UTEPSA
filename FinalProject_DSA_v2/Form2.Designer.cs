@@ -41,11 +41,33 @@
             txtPrice = new TextBox();
             lblPrice = new Label();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            btnAddToLibrary = new Button();
             lblHeaderF2 = new Label();
             label1 = new Label();
             label2 = new Label();
+            dtgvAll = new DataGridView();
+            IdCol = new DataGridViewTextBoxColumn();
+            nameCol = new DataGridViewTextBoxColumn();
+            instructorCol = new DataGridViewTextBoxColumn();
+            categoryCol = new DataGridViewTextBoxColumn();
+            lengthCol = new DataGridViewTextBoxColumn();
+            priceCol = new DataGridViewTextBoxColumn();
+            dtgvFiltered = new DataGridView();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
+            lblFiltered = new Label();
+            btnDeleteFromLibrary = new Button();
+            btnEmptyLibrary = new Button();
+            btnSearch = new Button();
+            btnClearSearch = new Button();
+            lblLibrary = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvAll).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvFiltered).BeginInit();
             SuspendLayout();
             // 
             // lblId
@@ -170,21 +192,22 @@
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnAddToLibrary
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.Snow;
-            button1.Location = new Point(576, 191);
-            button1.Name = "button1";
-            button1.Size = new Size(101, 23);
-            button1.TabIndex = 13;
-            button1.Text = "Add to Library";
-            button1.UseVisualStyleBackColor = false;
+            btnAddToLibrary.BackColor = Color.Transparent;
+            btnAddToLibrary.Cursor = Cursors.Hand;
+            btnAddToLibrary.FlatAppearance.BorderSize = 0;
+            btnAddToLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnAddToLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAddToLibrary.FlatStyle = FlatStyle.Flat;
+            btnAddToLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAddToLibrary.ForeColor = Color.Snow;
+            btnAddToLibrary.Location = new Point(576, 191);
+            btnAddToLibrary.Name = "btnAddToLibrary";
+            btnAddToLibrary.Size = new Size(101, 23);
+            btnAddToLibrary.TabIndex = 13;
+            btnAddToLibrary.Text = "Add to Library";
+            btnAddToLibrary.UseVisualStyleBackColor = false;
             // 
             // lblHeaderF2
             // 
@@ -221,17 +244,218 @@
             label2.TabIndex = 16;
             label2.Text = "Adding new courses will make your library grow!";
             // 
+            // dtgvAll
+            // 
+            dtgvAll.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvAll.BackgroundColor = Color.Snow;
+            dtgvAll.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dtgvAll.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvAll.Columns.AddRange(new DataGridViewColumn[] { IdCol, nameCol, instructorCol, categoryCol, lengthCol, priceCol });
+            dtgvAll.Location = new Point(57, 269);
+            dtgvAll.MinimumSize = new Size(40, 20);
+            dtgvAll.Name = "dtgvAll";
+            dtgvAll.RowTemplate.Height = 30;
+            dtgvAll.Size = new Size(620, 225);
+            dtgvAll.TabIndex = 17;
+            // 
+            // IdCol
+            // 
+            IdCol.FillWeight = 40F;
+            IdCol.HeaderText = "ID";
+            IdCol.Name = "IdCol";
+            IdCol.Resizable = DataGridViewTriState.True;
+            // 
+            // nameCol
+            // 
+            nameCol.FillWeight = 89.5431442F;
+            nameCol.HeaderText = "Name";
+            nameCol.Name = "nameCol";
+            // 
+            // instructorCol
+            // 
+            instructorCol.FillWeight = 89.5431442F;
+            instructorCol.HeaderText = "Instructor";
+            instructorCol.Name = "instructorCol";
+            // 
+            // categoryCol
+            // 
+            categoryCol.FillWeight = 89.5431442F;
+            categoryCol.HeaderText = "Category";
+            categoryCol.Name = "categoryCol";
+            // 
+            // lengthCol
+            // 
+            lengthCol.FillWeight = 50F;
+            lengthCol.HeaderText = "Length";
+            lengthCol.Name = "lengthCol";
+            // 
+            // priceCol
+            // 
+            priceCol.FillWeight = 50F;
+            priceCol.HeaderText = "Price";
+            priceCol.Name = "priceCol";
+            // 
+            // dtgvFiltered
+            // 
+            dtgvFiltered.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgvFiltered.BackgroundColor = Color.Snow;
+            dtgvFiltered.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dtgvFiltered.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgvFiltered.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            dtgvFiltered.Location = new Point(57, 515);
+            dtgvFiltered.MinimumSize = new Size(40, 20);
+            dtgvFiltered.Name = "dtgvFiltered";
+            dtgvFiltered.RowTemplate.Height = 30;
+            dtgvFiltered.Size = new Size(620, 53);
+            dtgvFiltered.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.FillWeight = 40F;
+            dataGridViewTextBoxColumn1.HeaderText = "ID";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.True;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.FillWeight = 89.5431442F;
+            dataGridViewTextBoxColumn2.HeaderText = "Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.FillWeight = 89.5431442F;
+            dataGridViewTextBoxColumn3.HeaderText = "Instructor";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.FillWeight = 89.5431442F;
+            dataGridViewTextBoxColumn4.HeaderText = "Category";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.FillWeight = 50F;
+            dataGridViewTextBoxColumn5.HeaderText = "Length";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.FillWeight = 50F;
+            dataGridViewTextBoxColumn6.HeaderText = "Price";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lblFiltered
+            // 
+            lblFiltered.AutoSize = true;
+            lblFiltered.BackColor = Color.Transparent;
+            lblFiltered.ForeColor = SystemColors.MenuBar;
+            lblFiltered.Location = new Point(57, 497);
+            lblFiltered.Name = "lblFiltered";
+            lblFiltered.Size = new Size(80, 15);
+            lblFiltered.TabIndex = 19;
+            lblFiltered.Text = "Search Result:";
+            // 
+            // btnDeleteFromLibrary
+            // 
+            btnDeleteFromLibrary.BackColor = Color.Transparent;
+            btnDeleteFromLibrary.Cursor = Cursors.Hand;
+            btnDeleteFromLibrary.FlatAppearance.BorderSize = 0;
+            btnDeleteFromLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnDeleteFromLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnDeleteFromLibrary.FlatStyle = FlatStyle.Flat;
+            btnDeleteFromLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDeleteFromLibrary.ForeColor = Color.Snow;
+            btnDeleteFromLibrary.Location = new Point(551, 220);
+            btnDeleteFromLibrary.Name = "btnDeleteFromLibrary";
+            btnDeleteFromLibrary.Size = new Size(126, 23);
+            btnDeleteFromLibrary.TabIndex = 20;
+            btnDeleteFromLibrary.Text = "Delete from Library";
+            btnDeleteFromLibrary.UseVisualStyleBackColor = false;
+            // 
+            // btnEmptyLibrary
+            // 
+            btnEmptyLibrary.BackColor = Color.Transparent;
+            btnEmptyLibrary.Cursor = Cursors.Hand;
+            btnEmptyLibrary.FlatAppearance.BorderSize = 0;
+            btnEmptyLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnEmptyLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnEmptyLibrary.FlatStyle = FlatStyle.Flat;
+            btnEmptyLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEmptyLibrary.ForeColor = Color.Snow;
+            btnEmptyLibrary.Location = new Point(443, 220);
+            btnEmptyLibrary.Name = "btnEmptyLibrary";
+            btnEmptyLibrary.Size = new Size(101, 23);
+            btnEmptyLibrary.TabIndex = 21;
+            btnEmptyLibrary.Text = "Empty Library";
+            btnEmptyLibrary.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = Color.Transparent;
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnSearch.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSearch.ForeColor = Color.Snow;
+            btnSearch.Location = new Point(53, 220);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(101, 23);
+            btnSearch.TabIndex = 22;
+            btnSearch.Text = "Search Course";
+            btnSearch.TextAlign = ContentAlignment.MiddleLeft;
+            btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // btnClearSearch
+            // 
+            btnClearSearch.BackColor = Color.Transparent;
+            btnClearSearch.Cursor = Cursors.Hand;
+            btnClearSearch.FlatAppearance.BorderSize = 0;
+            btnClearSearch.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnClearSearch.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnClearSearch.FlatStyle = FlatStyle.Flat;
+            btnClearSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearSearch.ForeColor = Color.Snow;
+            btnClearSearch.Location = new Point(164, 220);
+            btnClearSearch.Name = "btnClearSearch";
+            btnClearSearch.Size = new Size(33, 23);
+            btnClearSearch.TabIndex = 23;
+            btnClearSearch.Text = "CS";
+            btnClearSearch.UseVisualStyleBackColor = false;
+            // 
+            // lblLibrary
+            // 
+            lblLibrary.AutoSize = true;
+            lblLibrary.BackColor = Color.Transparent;
+            lblLibrary.ForeColor = SystemColors.MenuBar;
+            lblLibrary.Location = new Point(57, 251);
+            lblLibrary.Name = "lblLibrary";
+            lblLibrary.Size = new Size(46, 15);
+            lblLibrary.TabIndex = 24;
+            lblLibrary.Text = "Library:";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.DSA_portrait_back;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(740, 616);
+            ClientSize = new Size(740, 607);
+            Controls.Add(lblLibrary);
+            Controls.Add(btnClearSearch);
+            Controls.Add(btnSearch);
+            Controls.Add(btnEmptyLibrary);
+            Controls.Add(btnDeleteFromLibrary);
+            Controls.Add(lblFiltered);
+            Controls.Add(dtgvFiltered);
+            Controls.Add(dtgvAll);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblHeaderF2);
-            Controls.Add(button1);
+            Controls.Add(btnAddToLibrary);
             Controls.Add(pictureBox1);
             Controls.Add(txtPrice);
             Controls.Add(lblPrice);
@@ -250,6 +474,8 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvAll).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dtgvFiltered).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,9 +495,29 @@
         private TextBox txtPrice;
         private Label lblPrice;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button btnAddToLibrary;
         private Label lblHeaderF2;
         private Label label1;
         private Label label2;
+        private DataGridView dtgvAll;
+        private DataGridViewTextBoxColumn IdCol;
+        private DataGridViewTextBoxColumn nameCol;
+        private DataGridViewTextBoxColumn instructorCol;
+        private DataGridViewTextBoxColumn categoryCol;
+        private DataGridViewTextBoxColumn lengthCol;
+        private DataGridViewTextBoxColumn priceCol;
+        private DataGridView dtgvFiltered;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private Label lblFiltered;
+        private Button btnDeleteFromLibrary;
+        private Button btnEmptyLibrary;
+        private Button btnSearch;
+        private Button btnClearSearch;
+        private Label lblLibrary;
     }
 }
