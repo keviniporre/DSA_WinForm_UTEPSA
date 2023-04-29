@@ -65,6 +65,8 @@
             btnSearch = new Button();
             btnClearSearch = new Button();
             lblLibrary = new Label();
+            btnMinimizeF2 = new Button();
+            btnClose1 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvAll).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFiltered).BeginInit();
@@ -194,11 +196,11 @@
             // 
             // btnAddToLibrary
             // 
-            btnAddToLibrary.BackColor = Color.Transparent;
+            btnAddToLibrary.BackColor = Color.DarkSlateBlue;
             btnAddToLibrary.Cursor = Cursors.Hand;
             btnAddToLibrary.FlatAppearance.BorderSize = 0;
-            btnAddToLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnAddToLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnAddToLibrary.FlatAppearance.MouseDownBackColor = Color.Indigo;
+            btnAddToLibrary.FlatAppearance.MouseOverBackColor = Color.Indigo;
             btnAddToLibrary.FlatStyle = FlatStyle.Flat;
             btnAddToLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddToLibrary.ForeColor = Color.Snow;
@@ -208,6 +210,8 @@
             btnAddToLibrary.TabIndex = 13;
             btnAddToLibrary.Text = "Add to Library";
             btnAddToLibrary.UseVisualStyleBackColor = false;
+            btnAddToLibrary.MouseLeave += btnAddToLibrary_MouseLeave;
+            btnAddToLibrary.MouseHover += btnAddToLibrary_MouseHover;
             // 
             // lblHeaderF2
             // 
@@ -359,11 +363,11 @@
             // 
             // btnDeleteFromLibrary
             // 
-            btnDeleteFromLibrary.BackColor = Color.Transparent;
+            btnDeleteFromLibrary.BackColor = Color.DarkSlateBlue;
             btnDeleteFromLibrary.Cursor = Cursors.Hand;
             btnDeleteFromLibrary.FlatAppearance.BorderSize = 0;
-            btnDeleteFromLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnDeleteFromLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnDeleteFromLibrary.FlatAppearance.MouseDownBackColor = Color.Indigo;
+            btnDeleteFromLibrary.FlatAppearance.MouseOverBackColor = Color.Indigo;
             btnDeleteFromLibrary.FlatStyle = FlatStyle.Flat;
             btnDeleteFromLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnDeleteFromLibrary.ForeColor = Color.Snow;
@@ -373,14 +377,17 @@
             btnDeleteFromLibrary.TabIndex = 20;
             btnDeleteFromLibrary.Text = "Delete from Library";
             btnDeleteFromLibrary.UseVisualStyleBackColor = false;
+            btnDeleteFromLibrary.Click += btnDeleteFromLibrary_Click;
+            btnDeleteFromLibrary.MouseLeave += btnDeleteFromLibrary_MouseLeave;
+            btnDeleteFromLibrary.MouseHover += btnDeleteFromLibrary_MouseHover;
             // 
             // btnEmptyLibrary
             // 
-            btnEmptyLibrary.BackColor = Color.Transparent;
+            btnEmptyLibrary.BackColor = Color.DarkSlateBlue;
             btnEmptyLibrary.Cursor = Cursors.Hand;
             btnEmptyLibrary.FlatAppearance.BorderSize = 0;
-            btnEmptyLibrary.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnEmptyLibrary.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnEmptyLibrary.FlatAppearance.MouseDownBackColor = Color.Indigo;
+            btnEmptyLibrary.FlatAppearance.MouseOverBackColor = Color.Indigo;
             btnEmptyLibrary.FlatStyle = FlatStyle.Flat;
             btnEmptyLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmptyLibrary.ForeColor = Color.Snow;
@@ -390,14 +397,16 @@
             btnEmptyLibrary.TabIndex = 21;
             btnEmptyLibrary.Text = "Empty Library";
             btnEmptyLibrary.UseVisualStyleBackColor = false;
+            btnEmptyLibrary.MouseLeave += btnEmptyLibrary_MouseLeave;
+            btnEmptyLibrary.MouseHover += btnEmptyLibrary_MouseHover;
             // 
             // btnSearch
             // 
-            btnSearch.BackColor = Color.Transparent;
+            btnSearch.BackColor = Color.DarkSlateBlue;
             btnSearch.Cursor = Cursors.Hand;
             btnSearch.FlatAppearance.BorderSize = 0;
-            btnSearch.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnSearch.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnSearch.FlatAppearance.MouseDownBackColor = Color.Indigo;
+            btnSearch.FlatAppearance.MouseOverBackColor = Color.Indigo;
             btnSearch.FlatStyle = FlatStyle.Flat;
             btnSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnSearch.ForeColor = Color.Snow;
@@ -406,25 +415,28 @@
             btnSearch.Size = new Size(101, 23);
             btnSearch.TabIndex = 22;
             btnSearch.Text = "Search Course";
-            btnSearch.TextAlign = ContentAlignment.MiddleLeft;
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.MouseLeave += btnSearch_MouseLeave;
+            btnSearch.MouseHover += btnSearch_MouseHover;
             // 
             // btnClearSearch
             // 
-            btnClearSearch.BackColor = Color.Transparent;
+            btnClearSearch.BackColor = Color.DarkSlateBlue;
             btnClearSearch.Cursor = Cursors.Hand;
             btnClearSearch.FlatAppearance.BorderSize = 0;
-            btnClearSearch.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnClearSearch.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnClearSearch.FlatAppearance.MouseDownBackColor = Color.Indigo;
+            btnClearSearch.FlatAppearance.MouseOverBackColor = Color.Indigo;
             btnClearSearch.FlatStyle = FlatStyle.Flat;
             btnClearSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearSearch.ForeColor = Color.Snow;
-            btnClearSearch.Location = new Point(164, 220);
+            btnClearSearch.Location = new Point(160, 220);
             btnClearSearch.Name = "btnClearSearch";
-            btnClearSearch.Size = new Size(33, 23);
+            btnClearSearch.Size = new Size(90, 23);
             btnClearSearch.TabIndex = 23;
-            btnClearSearch.Text = "CS";
+            btnClearSearch.Text = "Clear Search";
             btnClearSearch.UseVisualStyleBackColor = false;
+            btnClearSearch.MouseLeave += btnClearSearch_MouseLeave;
+            btnClearSearch.MouseHover += btnClearSearch_MouseHover;
             // 
             // lblLibrary
             // 
@@ -437,13 +449,61 @@
             lblLibrary.TabIndex = 24;
             lblLibrary.Text = "Library:";
             // 
+            // btnMinimizeF2
+            // 
+            btnMinimizeF2.BackColor = Color.Transparent;
+            btnMinimizeF2.Cursor = Cursors.Hand;
+            btnMinimizeF2.FlatAppearance.BorderSize = 0;
+            btnMinimizeF2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMinimizeF2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMinimizeF2.FlatStyle = FlatStyle.Flat;
+            btnMinimizeF2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMinimizeF2.ForeColor = Color.Snow;
+            btnMinimizeF2.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMinimizeF2.Location = new Point(661, 10);
+            btnMinimizeF2.Name = "btnMinimizeF2";
+            btnMinimizeF2.Size = new Size(28, 23);
+            btnMinimizeF2.TabIndex = 25;
+            btnMinimizeF2.Text = "__";
+            btnMinimizeF2.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnMinimizeF2.UseVisualStyleBackColor = false;
+            btnMinimizeF2.Click += btnMinimizeF2_Click;
+            btnMinimizeF2.MouseLeave += btnMinimizeF2_MouseLeave;
+            btnMinimizeF2.MouseHover += btnMinimizeF2_MouseHover;
+            // 
+            // btnClose1
+            // 
+            btnClose1.BackColor = Color.Transparent;
+            btnClose1.Cursor = Cursors.Hand;
+            btnClose1.FlatAppearance.BorderSize = 0;
+            btnClose1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnClose1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnClose1.FlatStyle = FlatStyle.Flat;
+            btnClose1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClose1.ForeColor = Color.Snow;
+            btnClose1.ImageAlign = ContentAlignment.MiddleLeft;
+            btnClose1.Location = new Point(692, 7);
+            btnClose1.Name = "btnClose1";
+            btnClose1.Size = new Size(24, 27);
+            btnClose1.TabIndex = 26;
+            btnClose1.Text = "x";
+            btnClose1.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnClose1.UseVisualStyleBackColor = false;
+            btnClose1.Click += btnClose1_Click;
+            btnClose1.MouseLeave += btnClose1_MouseLeave;
+            btnClose1.MouseHover += btnClose1_MouseHover;
+            // 
             // Form2
             // 
+            AcceptButton = btnAddToLibrary;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
             BackgroundImage = Properties.Resources.DSA_portrait_back;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(740, 607);
+            Controls.Add(btnClose1);
+            Controls.Add(btnMinimizeF2);
             Controls.Add(lblLibrary);
             Controls.Add(btnClearSearch);
             Controls.Add(btnSearch);
@@ -470,9 +530,11 @@
             Controls.Add(lblName);
             Controls.Add(lblId);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
+            TransparencyKey = Color.Black;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvAll).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFiltered).EndInit();
@@ -519,5 +581,7 @@
         private Button btnSearch;
         private Button btnClearSearch;
         private Label lblLibrary;
+        private Button btnMinimizeF2;
+        private Button btnClose1;
     }
 }
