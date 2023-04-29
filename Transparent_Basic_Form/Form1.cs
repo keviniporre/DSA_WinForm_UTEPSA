@@ -5,8 +5,7 @@ namespace Transparent_Basic_Form
         public Form1()
         {
             InitializeComponent();
-            textBox1.Focus();
-            MessageBox.Show("Hello");
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,9 +25,11 @@ namespace Transparent_Basic_Form
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Hide();
             Form2 form2 = new Form2();
-            form2.Show();
-            this.Hide();
+            form2.ShowDialog();
+            form2 = null;
+            Show();
         }
     }
 }
