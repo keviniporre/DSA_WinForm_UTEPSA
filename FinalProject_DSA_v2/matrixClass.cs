@@ -52,6 +52,22 @@ namespace FinalProject_DSA_v2
             if (lastRow == maxRows - 1) { return true; }
             else { return false; }
         }
+        public void insertContainerToMatrix()
+        {
+            if (isMatrixFull())
+            {
+                MessageBox.Show("The matrix is full");
+                matrixFull = true;
+            }
+            else
+            {
+                lastRow++;
+                for (int i = 0; i < 6; i++)
+                {
+                    matrix[i, lastRow] = container[i];
+                }
+            }
+        }
         public void deleteRow(DataGridView grid)
         {
             if (isMatrixEmpty() || getselectedRowIndex() == -1)
@@ -67,17 +83,13 @@ namespace FinalProject_DSA_v2
         }
         public void showOnGrid(DataGridView grid)
         {
-            if (isMatrixFull())
+            if (!matrixFull)
             {
-                MessageBox.Show("The Matrix is Full", "Learnify Alert");
-            }
-            else
-            {
-                lastRow++;
                 grid.Rows.Add();
-                for (int i = 0;i < 6;i++)
+
+                for (int i = 0; i < 6; i++)
                 {
-                    grid.Rows[lastRow].Cells[i].Value = container[i];
+                    grid.Rows[lastRow].Cells[i].Value = matrix[i, lastRow];
                 }
             }
         }
@@ -97,10 +109,11 @@ namespace FinalProject_DSA_v2
         }
         public void searchItemRowIndex()
         {
+            setSearchRowIndex(-1);
+
             for (int i =0; i<=lastRow ;i++)
             {
                 if (matrix[0,i] == getId()) { setSearchRowIndex(i); }
-                else { setSearchRowIndex(-1); }
             }
         }
         public void showSearchMatrix(DataGridView grid)

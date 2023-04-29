@@ -12,7 +12,7 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form2 : Form
     {
-        matrixClass library = new matrixClass(3);
+        matrixClass library = new matrixClass(2);
         public Form2()
         {
             InitializeComponent();
@@ -107,6 +107,7 @@ namespace FinalProject_DSA_v2
         {
             library.setAllValues(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
             library.setValuesToContainer();
+            library.insertContainerToMatrix();
             library.showOnGrid(dtgvAll);
             library.clearAllTextbox(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
             txtId.Focus();
@@ -125,13 +126,15 @@ namespace FinalProject_DSA_v2
         private void btnEmptyLibrary_Click(object sender, EventArgs e)
         {
             library.emptyMatrix(dtgvAll);
+            txtId.Focus();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            library.setId(txtId.Text);
             library.searchItemRowIndex();
             library.showSearchMatrix(dtgvFiltered);
-
+            txtId.Focus();
         }
     }
 }
