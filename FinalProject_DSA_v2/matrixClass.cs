@@ -85,11 +85,37 @@ namespace FinalProject_DSA_v2
         {
             grid.Rows.Clear();
             matrixFull = false;
-            for (int i = 0; i<6;i++)
-            {
-                container[i] = string.Empty;
-            }
             lastRow = -1;
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < lastRow; j++)
+                {
+                    matrix[i, j] = string.Empty;
+                }
+            }
+        }
+        public void searchItemRowIndex()
+        {
+            for (int i =0; i<=lastRow ;i++)
+            {
+                if (matrix[0,i] == getId()) { setSearchRowIndex(i); }
+                else { setSearchRowIndex(-1); }
+            }
+        }
+        public void showSearchMatrix(DataGridView grid)
+        {
+            grid.Rows.Clear();
+            grid.Rows.Add();
+
+            if (getSearchRowIndex() == -1) { MessageBox.Show("Sorry, course not Found :("); }
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    grid.Rows[0].Cells[i].Value = matrix[i, getSearchRowIndex()];
+                }
+            }
         }
         public void clearAllTextbox(TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4, TextBox txt5, TextBox txt6)
         {

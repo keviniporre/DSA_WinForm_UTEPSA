@@ -419,6 +419,7 @@
             btnSearch.TabIndex = 22;
             btnSearch.Text = "Search Course";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             btnSearch.MouseLeave += btnSearch_MouseLeave;
             btnSearch.MouseHover += btnSearch_MouseHover;
             // 

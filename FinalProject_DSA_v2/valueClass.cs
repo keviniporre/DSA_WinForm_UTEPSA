@@ -10,13 +10,13 @@ namespace FinalProject_DSA_v2
     {
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
-        private int numberOfCourses, selectedRowIndex;
+        private int numberOfCourses, selectedRowIndex, searchRowIndex;
 
         //Declaracion Constructor
         public valueClass()
         {
             idValue = nameValue = instructorValue = categoryValue = lengthValue = priceValue = string.Empty;
-            numberOfCourses = selectedRowIndex = -1;
+            numberOfCourses = selectedRowIndex = searchRowIndex = -1;
         }
         //Declaracion Metodos SET Form 1
         public void setNummberOfCourses(int nummberOfCourses) { this.numberOfCourses = nummberOfCourses; }
@@ -30,6 +30,7 @@ namespace FinalProject_DSA_v2
         public void setLength(string length) { this.lengthValue = length; }
         public void setPrice(string price) {  this.priceValue = price; }
         public void setselectedRowIndex(int selectedRowIndex) { this.selectedRowIndex = selectedRowIndex; }
+        public void setSearchRowIndex(int rowIndex) { this.searchRowIndex = rowIndex; }
 
         public string getId() { return idValue; }
         public string getName() { return nameValue; }
@@ -38,6 +39,7 @@ namespace FinalProject_DSA_v2
         public string getLength() { return lengthValue; }
         public string getPrice() { return priceValue; }
         public int getselectedRowIndex() { return selectedRowIndex; }
+        public int getSearchRowIndex() {  return searchRowIndex; }
 
 
     }

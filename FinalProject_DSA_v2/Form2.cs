@@ -126,5 +126,12 @@ namespace FinalProject_DSA_v2
         {
             library.emptyMatrix(dtgvAll);
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            library.searchItemRowIndex();
+            library.showSearchMatrix(dtgvFiltered);
+
+        }
     }
 }
