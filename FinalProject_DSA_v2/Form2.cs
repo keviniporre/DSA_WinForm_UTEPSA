@@ -12,6 +12,7 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form2 : Form
     {
+        matrixClass library = new matrixClass(3);
         public Form2()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace FinalProject_DSA_v2
 
         private void btnDeleteFromLibrary_Click(object sender, EventArgs e)
         {
-
+            library.deleteRow(dtgvAll);
         }
 
         private void btnDeleteFromLibrary_MouseHover(object sender, EventArgs e)
@@ -100,6 +101,30 @@ namespace FinalProject_DSA_v2
         private void btnMinimizeF2_MouseLeave(object sender, EventArgs e)
         {
             btnMinimizeF2.ForeColor = Color.Snow;
+        }
+
+        private void btnAddToLibrary_Click(object sender, EventArgs e)
+        {
+            library.setAllValues(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+            library.setValuesToContainer();
+            library.showOnGrid(dtgvAll);
+            library.clearAllTextbox(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+            txtId.Focus();
+        }
+
+        private void btnClearSearch_Click(object sender, EventArgs e)
+        {
+            dtgvFiltered.Rows.Clear();
+        }
+
+        private void dtgvAll_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            library.setselectedRowIndex(e.RowIndex);
+        }
+
+        private void btnEmptyLibrary_Click(object sender, EventArgs e)
+        {
+            library.emptyMatrix(dtgvAll);
         }
     }
 }

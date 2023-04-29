@@ -10,13 +10,13 @@ namespace FinalProject_DSA_v2
     {
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
-        private int numberOfCourses, gridSelectedRowIndex;
+        private int numberOfCourses, selectedRowIndex;
 
         //Declaracion Constructor
         public valueClass()
         {
             idValue = nameValue = instructorValue = categoryValue = lengthValue = priceValue = string.Empty;
-            numberOfCourses = gridSelectedRowIndex = -1;
+            numberOfCourses = selectedRowIndex = -1;
         }
         //Declaracion Metodos SET Form 1
         public void setNummberOfCourses(int nummberOfCourses) { this.numberOfCourses = nummberOfCourses; }
@@ -29,7 +29,7 @@ namespace FinalProject_DSA_v2
         public void setCategory(string category) {  this.categoryValue = category; }
         public void setLength(string length) { this.lengthValue = length; }
         public void setPrice(string price) {  this.priceValue = price; }
-        public void setGridSelectedRowIndex(int selectedRowIndex) { this.gridSelectedRowIndex = selectedRowIndex; }
+        public void setselectedRowIndex(int selectedRowIndex) { this.selectedRowIndex = selectedRowIndex; }
 
         public string getId() { return idValue; }
         public string getName() { return nameValue; }
@@ -37,7 +37,7 @@ namespace FinalProject_DSA_v2
         public string getCategory() { return categoryValue; }
         public string getLength() { return lengthValue; }
         public string getPrice() { return priceValue; }
-        public int getGridSelectedRowIndex() { return gridSelectedRowIndex; }
+        public int getselectedRowIndex() { return selectedRowIndex; }
 
 
     }

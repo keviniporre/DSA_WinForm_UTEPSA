@@ -210,6 +210,7 @@
             btnAddToLibrary.TabIndex = 13;
             btnAddToLibrary.Text = "Add to Library";
             btnAddToLibrary.UseVisualStyleBackColor = false;
+            btnAddToLibrary.Click += btnAddToLibrary_Click;
             btnAddToLibrary.MouseLeave += btnAddToLibrary_MouseLeave;
             btnAddToLibrary.MouseHover += btnAddToLibrary_MouseHover;
             // 
@@ -261,6 +262,7 @@
             dtgvAll.RowTemplate.Height = 30;
             dtgvAll.Size = new Size(620, 225);
             dtgvAll.TabIndex = 17;
+            dtgvAll.CellClick += dtgvAll_CellClick;
             // 
             // IdCol
             // 
@@ -397,6 +399,7 @@
             btnEmptyLibrary.TabIndex = 21;
             btnEmptyLibrary.Text = "Empty Library";
             btnEmptyLibrary.UseVisualStyleBackColor = false;
+            btnEmptyLibrary.Click += btnEmptyLibrary_Click;
             btnEmptyLibrary.MouseLeave += btnEmptyLibrary_MouseLeave;
             btnEmptyLibrary.MouseHover += btnEmptyLibrary_MouseHover;
             // 
@@ -435,6 +438,7 @@
             btnClearSearch.TabIndex = 23;
             btnClearSearch.Text = "Clear Search";
             btnClearSearch.UseVisualStyleBackColor = false;
+            btnClearSearch.Click += btnClearSearch_Click;
             btnClearSearch.MouseLeave += btnClearSearch_MouseLeave;
             btnClearSearch.MouseHover += btnClearSearch_MouseHover;
             // 
