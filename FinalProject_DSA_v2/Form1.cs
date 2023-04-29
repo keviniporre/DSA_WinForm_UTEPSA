@@ -53,7 +53,7 @@ namespace FinalProject_DSA_v2
 
         private void btnMinimize_MouseLeave(object sender, EventArgs e)
         {
-            btnMinimize.ForeColor= Color.Snow;
+            btnMinimize.ForeColor = Color.Snow;
         }
     }
 }

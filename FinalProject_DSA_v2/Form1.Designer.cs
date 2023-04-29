@@ -69,11 +69,13 @@
             // 
             // txtNumberOfCourses
             // 
-            txtNumberOfCourses.BackColor = SystemColors.MenuBar;
+            txtNumberOfCourses.BackColor = Color.Snow;
+            txtNumberOfCourses.Cursor = Cursors.IBeam;
             txtNumberOfCourses.Location = new Point(308, 344);
             txtNumberOfCourses.Name = "txtNumberOfCourses";
             txtNumberOfCourses.Size = new Size(63, 23);
             txtNumberOfCourses.TabIndex = 3;
+            txtNumberOfCourses.TextAlign = HorizontalAlignment.Right;
             // 
             // label2
             // 
