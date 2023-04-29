@@ -498,7 +498,7 @@
             AcceptButton = btnAddToLibrary;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Black;
+            BackColor = Color.FromArgb(10, 10, 10);
             BackgroundImage = Properties.Resources.DSA_portrait_back;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(740, 607);
@@ -534,7 +534,7 @@
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
-            TransparencyKey = Color.Black;
+            TransparencyKey = Color.FromArgb(10, 10, 10);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvAll).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFiltered).EndInit();
