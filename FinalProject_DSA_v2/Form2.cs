@@ -12,7 +12,7 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form2 : Form
     {
-        matrixClass library = new matrixClass(2);
+        matrixClass library = new matrixClass(3);
         public Form2()
         {
             InitializeComponent();

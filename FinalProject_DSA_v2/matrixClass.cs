@@ -68,6 +68,7 @@ namespace FinalProject_DSA_v2
                 }
             }
         }
+        //Need to Move Items According to deleted cell
         public void deleteRow(DataGridView grid)
         {
             if (isMatrixEmpty() || getselectedRowIndex() == -1)
@@ -77,6 +78,21 @@ namespace FinalProject_DSA_v2
             else
             {
                 grid.Rows.RemoveAt(getselectedRowIndex());
+
+                //Deletes on Matrix
+                for (int i = 0; i < 6; i++)
+                {
+                    for (int j = getselectedRowIndex(); j < lastRow; j++)
+                    {
+                        matrix[i, j] = matrix[i, j+1];
+                    }
+                }
+                //Empty last row
+                for (int i = 0; i<6; i++)
+                {
+                    matrix[i,lastRow] = string.Empty;
+                }
+
                 matrixFull = false;
                 lastRow--;
             }
