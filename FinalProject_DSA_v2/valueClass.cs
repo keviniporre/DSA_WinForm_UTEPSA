@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace FinalProject_DSA_v2
 {
+    
     public class valueClass
     {
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
         private int numberOfCourses, selectedRowIndex, searchRowIndex;
+        public static int MyVariable = 0;
 
         //Declaracion Constructor
         public valueClass()
@@ -21,6 +23,11 @@ namespace FinalProject_DSA_v2
         //Declaracion Metodos SET Form 1
         public void setNummberOfCourses(int nummberOfCourses) { this.numberOfCourses = nummberOfCourses; }
         public int getNummberOfCourses() {  return this.numberOfCourses; }
+
+        public void isNumber(int numberOfCourses)
+        {
+            //
+        }
 
         //Declaracion Metodos SET Form 2
         public void setId(string id) { this.idValue = id; }

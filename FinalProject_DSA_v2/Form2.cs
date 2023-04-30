@@ -12,10 +12,11 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form2 : Form
     {
-        matrixClass library = new matrixClass(3);
+        matrixClass library = new matrixClass();
         public Form2()
         {
             InitializeComponent();
+            lblRegisterCourses.Text = "Ready to register " + valueClass.MyVariable + " new courses."; 
         }
 
         private void btnAddToLibrary_MouseHover(object sender, EventArgs e)

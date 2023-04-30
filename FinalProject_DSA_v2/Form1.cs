@@ -34,6 +34,9 @@ namespace FinalProject_DSA_v2
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
+            valueClass.MyVariable = Convert.ToInt16(txtNumberOfCourses.Text);
+            MessageBox.Show("Going to register: " + valueClass.MyVariable);
+
             Hide();
             Form2 form2 = new Form2();
             form2.ShowDialog();

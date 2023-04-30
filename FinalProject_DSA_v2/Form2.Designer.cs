@@ -43,7 +43,7 @@
             pictureBox1 = new PictureBox();
             btnAddToLibrary = new Button();
             lblHeaderF2 = new Label();
-            label1 = new Label();
+            lblRegisterCourses = new Label();
             label2 = new Label();
             dtgvAll = new DataGridView();
             IdCol = new DataGridViewTextBoxColumn();
@@ -188,7 +188,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = Properties.Resources.logolearnifyV2;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(57, 53);
+            pictureBox1.Location = new Point(57, 40);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(193, 156);
             pictureBox1.TabIndex = 12;
@@ -204,9 +204,9 @@
             btnAddToLibrary.FlatStyle = FlatStyle.Flat;
             btnAddToLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAddToLibrary.ForeColor = Color.Snow;
-            btnAddToLibrary.Location = new Point(576, 191);
+            btnAddToLibrary.Location = new Point(551, 191);
             btnAddToLibrary.Name = "btnAddToLibrary";
-            btnAddToLibrary.Size = new Size(101, 23);
+            btnAddToLibrary.Size = new Size(126, 23);
             btnAddToLibrary.TabIndex = 13;
             btnAddToLibrary.Text = "Add to Library";
             btnAddToLibrary.UseVisualStyleBackColor = false;
@@ -226,17 +226,17 @@
             lblHeaderF2.TabIndex = 14;
             lblHeaderF2.Text = "Let's start Adding some courses";
             // 
-            // label1
+            // lblRegisterCourses
             // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.MenuBar;
-            label1.Location = new Point(288, 79);
-            label1.Name = "label1";
-            label1.Size = new Size(162, 15);
-            label1.TabIndex = 15;
-            label1.Text = "Register some new courses.";
+            lblRegisterCourses.AutoSize = true;
+            lblRegisterCourses.BackColor = Color.Transparent;
+            lblRegisterCourses.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            lblRegisterCourses.ForeColor = SystemColors.MenuBar;
+            lblRegisterCourses.Location = new Point(288, 79);
+            lblRegisterCourses.Name = "lblRegisterCourses";
+            lblRegisterCourses.Size = new Size(175, 15);
+            lblRegisterCourses.TabIndex = 15;
+            lblRegisterCourses.Text = "Ready to register new courses";
             // 
             // label2
             // 
@@ -260,7 +260,7 @@
             dtgvAll.MinimumSize = new Size(40, 20);
             dtgvAll.Name = "dtgvAll";
             dtgvAll.RowTemplate.Height = 30;
-            dtgvAll.Size = new Size(620, 225);
+            dtgvAll.Size = new Size(620, 241);
             dtgvAll.TabIndex = 17;
             dtgvAll.CellClick += dtgvAll_CellClick;
             // 
@@ -308,7 +308,7 @@
             dtgvFiltered.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dtgvFiltered.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvFiltered.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
-            dtgvFiltered.Location = new Point(57, 515);
+            dtgvFiltered.Location = new Point(57, 531);
             dtgvFiltered.MinimumSize = new Size(40, 20);
             dtgvFiltered.Name = "dtgvFiltered";
             dtgvFiltered.RowTemplate.Height = 30;
@@ -357,7 +357,7 @@
             lblFiltered.AutoSize = true;
             lblFiltered.BackColor = Color.Transparent;
             lblFiltered.ForeColor = SystemColors.MenuBar;
-            lblFiltered.Location = new Point(57, 497);
+            lblFiltered.Location = new Point(57, 513);
             lblFiltered.Name = "lblFiltered";
             lblFiltered.Size = new Size(80, 15);
             lblFiltered.TabIndex = 19;
@@ -393,9 +393,9 @@
             btnEmptyLibrary.FlatStyle = FlatStyle.Flat;
             btnEmptyLibrary.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnEmptyLibrary.ForeColor = Color.Snow;
-            btnEmptyLibrary.Location = new Point(443, 220);
+            btnEmptyLibrary.Location = new Point(425, 220);
             btnEmptyLibrary.Name = "btnEmptyLibrary";
-            btnEmptyLibrary.Size = new Size(101, 23);
+            btnEmptyLibrary.Size = new Size(119, 23);
             btnEmptyLibrary.TabIndex = 21;
             btnEmptyLibrary.Text = "Empty Library";
             btnEmptyLibrary.UseVisualStyleBackColor = false;
@@ -415,7 +415,7 @@
             btnSearch.ForeColor = Color.Snow;
             btnSearch.Location = new Point(53, 220);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(101, 23);
+            btnSearch.Size = new Size(134, 23);
             btnSearch.TabIndex = 22;
             btnSearch.Text = "Search Course";
             btnSearch.UseVisualStyleBackColor = false;
@@ -433,7 +433,7 @@
             btnClearSearch.FlatStyle = FlatStyle.Flat;
             btnClearSearch.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnClearSearch.ForeColor = Color.Snow;
-            btnClearSearch.Location = new Point(160, 220);
+            btnClearSearch.Location = new Point(193, 220);
             btnClearSearch.Name = "btnClearSearch";
             btnClearSearch.Size = new Size(90, 23);
             btnClearSearch.TabIndex = 23;
@@ -506,7 +506,7 @@
             BackColor = Color.FromArgb(10, 10, 10);
             BackgroundImage = Properties.Resources.DSA_portrait_back;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(740, 607);
+            ClientSize = new Size(740, 633);
             Controls.Add(btnClose1);
             Controls.Add(btnMinimizeF2);
             Controls.Add(lblLibrary);
@@ -518,7 +518,7 @@
             Controls.Add(dtgvFiltered);
             Controls.Add(dtgvAll);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblRegisterCourses);
             Controls.Add(lblHeaderF2);
             Controls.Add(btnAddToLibrary);
             Controls.Add(pictureBox1);
@@ -564,7 +564,7 @@
         private PictureBox pictureBox1;
         private Button btnAddToLibrary;
         private Label lblHeaderF2;
-        private Label label1;
+        private Label lblRegisterCourses;
         private Label label2;
         private DataGridView dtgvAll;
         private DataGridViewTextBoxColumn IdCol;

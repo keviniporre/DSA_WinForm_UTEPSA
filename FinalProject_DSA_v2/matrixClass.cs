@@ -15,11 +15,11 @@ namespace FinalProject_DSA_v2
         private bool matrixFull;
 
         //Declaracion de Constructor
-        public matrixClass(int maxRows)
+        public matrixClass()
         {
             firstRow = 0;
             lastRow = -1;
-            this.maxRows = maxRows;
+            maxRows = valueClass.MyVariable;
             container = new string[6];
             matrix = new string[6, maxRows];
             matrixFull = false;
