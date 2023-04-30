@@ -2,6 +2,7 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form1 : Form
     {
+        matrixClass Obj = new matrixClass();
         public Form1()
         {
             InitializeComponent();
@@ -34,14 +35,16 @@ namespace FinalProject_DSA_v2
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
-            valueClass.MyVariable = Convert.ToInt16(txtNumberOfCourses.Text);
-            MessageBox.Show("Going to register: " + valueClass.MyVariable);
-
-            Hide();
-            Form2 form2 = new Form2();
-            form2.ShowDialog();
-            form2 = null;
-            Show();
+            //THIS HTIS THSI
+            Obj.setNumberOfCourses(txtNumberOfCourses.Text);
+            if (Obj.isGreaterThanZero(txtNumberOfCourses.Text))
+            {
+                Hide();
+                Form2 form2 = new Form2();
+                form2.ShowDialog();
+                form2 = null;
+                Show();
+            }
         }
 
         private void btnMini_Click(object sender, EventArgs e)

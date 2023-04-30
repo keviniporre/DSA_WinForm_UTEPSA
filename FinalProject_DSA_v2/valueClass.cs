@@ -11,23 +11,26 @@ namespace FinalProject_DSA_v2
     {
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
-        private int numberOfCourses, selectedRowIndex, searchRowIndex;
-        public static int MyVariable = 0;
+        private int selectedRowIndex, searchRowIndex;
+        public static int numberOfCourses = 0;
 
         //Declaracion Constructor
         public valueClass()
         {
             idValue = nameValue = instructorValue = categoryValue = lengthValue = priceValue = string.Empty;
-            numberOfCourses = selectedRowIndex = searchRowIndex = -1;
+            selectedRowIndex = searchRowIndex = -1;
         }
         //Declaracion Metodos SET Form 1
-        public void setNummberOfCourses(int nummberOfCourses) { this.numberOfCourses = nummberOfCourses; }
-        public int getNummberOfCourses() {  return this.numberOfCourses; }
-
-        public void isNumber(int numberOfCourses)
-        {
-            //
+        public void setNumberOfCourses(string txtNumberCourses) 
+        { 
+            if (isGreaterThanZero(txtNumberCourses))
+            {
+                numberOfCourses = Convert.ToInt16(txtNumberCourses);
+            }
+            else { MessageBox.Show("Please enter a valid integer number of courses."); }
         }
+        public int getNumberOfCourses() {  return numberOfCourses; }
+
 
         //Declaracion Metodos SET Form 2
         public void setId(string id) { this.idValue = id; }
@@ -48,6 +51,28 @@ namespace FinalProject_DSA_v2
         public int getselectedRowIndex() { return selectedRowIndex; }
         public int getSearchRowIndex() {  return searchRowIndex; }
 
+        //Metodos de Validacion
+        public int? ParseInt(string str)
+        {
+            int result;
+            if (int.TryParse(str, out result)) { return result; }
+            else { return null; }
+        }
+        public bool isNumber(string number)
+        {
+            int? parsedInt = ParseInt(number);
+            if (parsedInt.HasValue) { return true; }
+            else { return false; }
+        }
+        public bool isGreaterThanZero(string number)
+        {
+            if (isNumber(number))
+            {
+                if (Convert.ToInt16(number) > 0) { return true; }
+                else { return false; }
+            }
+            return false;
+        }
 
     }
 }

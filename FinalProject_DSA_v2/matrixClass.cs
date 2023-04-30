@@ -19,7 +19,7 @@ namespace FinalProject_DSA_v2
         {
             firstRow = 0;
             lastRow = -1;
-            maxRows = valueClass.MyVariable;
+            maxRows = getNumberOfCourses();
             container = new string[6];
             matrix = new string[6, maxRows];
             matrixFull = false;
@@ -150,5 +150,6 @@ namespace FinalProject_DSA_v2
         {
             txt1.Text = txt2.Text = txt3.Text = txt4.Text = txt5.Text = txt6.Text = string.Empty;
         }
+
     }
 }

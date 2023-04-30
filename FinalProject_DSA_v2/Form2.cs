@@ -16,7 +16,7 @@ namespace FinalProject_DSA_v2
         public Form2()
         {
             InitializeComponent();
-            lblRegisterCourses.Text = "Ready to register " + valueClass.MyVariable + " new courses."; 
+            lblRegisterCourses.Text = "Ready to register " + valueClass.numberOfCourses + " new courses.";
         }
 
         private void btnAddToLibrary_MouseHover(object sender, EventArgs e)
