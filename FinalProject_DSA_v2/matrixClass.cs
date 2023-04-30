@@ -8,6 +8,8 @@ namespace FinalProject_DSA_v2
 {
     public class matrixClass:valueClass
     {
+        //IMPROVE MESSAGEBOX 
+
         //Declaracion de variables/atributos
         private int firstRow, lastRow, maxRows;
         private string[] container;

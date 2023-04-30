@@ -9,6 +9,8 @@ namespace FinalProject_DSA_v2
     
     public class valueClass
     {
+        //IMPROVE MESSAGEBOX 
+
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
         private int selectedRowIndex, searchRowIndex;
