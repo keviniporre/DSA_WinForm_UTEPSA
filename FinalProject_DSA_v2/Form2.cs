@@ -106,13 +106,26 @@ namespace FinalProject_DSA_v2
 
         private void btnAddToLibrary_Click(object sender, EventArgs e)
         {
-            library.setAllValues(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
-            library.setValuesToContainer();
-            library.insertContainerToMatrix();
-            library.showOnGrid(dtgvAll);
-            library.clearAllTextbox(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
-            txtId.Focus();
+            if (library.isAnyTextboxEmpty(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice))
+            {
+                TextBox emptyTextbox = library.getEmptyTextboxName(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+                if (emptyTextbox != null) 
+                { 
+                    emptyTextbox.Focus();
+                }
+                MessageBox.Show("Please fill in all fields.");
+            }
+            else
+            {
+                library.setAllValues(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+                library.setValuesToContainer();
+                library.insertContainerToMatrix();
+                library.showOnGrid(dtgvAll);
+                library.clearAllTextbox(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+                txtId.Focus();
+            }
         }
+            
 
         private void btnClearSearch_Click(object sender, EventArgs e)
         {
@@ -132,10 +145,19 @@ namespace FinalProject_DSA_v2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            library.setId(txtId.Text);
-            library.searchItemRowIndex();
-            library.showSearchMatrix(dtgvFiltered);
-            txtId.Focus();
+            if (library.isTextboxEmpty(txtId))
+            {
+                MessageBox.Show("Please fill in the ID field.");
+            }
+            else
+            {
+                library.setId(txtId);
+                library.searchItemRowIndex();
+                library.showSearchMatrix(dtgvFiltered);
+                library.clearAllTextbox(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
+                txtId.Text = library.getId();
+                txtId.Focus();
+            }
         }
     }
 }

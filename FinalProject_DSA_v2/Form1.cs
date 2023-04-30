@@ -35,10 +35,10 @@ namespace FinalProject_DSA_v2
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
-            //THIS HTIS THSI
             Obj.setNumberOfCourses(txtNumberOfCourses.Text);
             if (Obj.isGreaterThanZero(txtNumberOfCourses.Text))
             {
+                txtNumberOfCourses.Text = string.Empty;
                 Hide();
                 Form2 form2 = new Form2();
                 form2.ShowDialog();

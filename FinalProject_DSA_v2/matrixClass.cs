@@ -26,7 +26,7 @@ namespace FinalProject_DSA_v2
         }
         public void setAllValues(TextBox txtId, TextBox txtName, TextBox txtInstructor, TextBox txtCategory, TextBox txtLength, TextBox txtPrice)
         {
-            setId(txtId.Text);
+            setId(txtId);
             setName(txtName.Text);
             setInstructor(txtInstructor.Text);
             setCategory(txtCategory.Text);

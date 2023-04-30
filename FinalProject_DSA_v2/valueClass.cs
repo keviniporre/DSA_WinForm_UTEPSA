@@ -33,7 +33,7 @@ namespace FinalProject_DSA_v2
 
 
         //Declaracion Metodos SET Form 2
-        public void setId(string id) { this.idValue = id; }
+        public void setId(TextBox txtId) { this.idValue = txtId.Text; }
         public void setName(string name) { this.nameValue = name; }
         public void setInstructor(string instructor) { this.instructorValue = instructor; }
         public void setCategory(string category) {  this.categoryValue = category; }
@@ -41,6 +41,7 @@ namespace FinalProject_DSA_v2
         public void setPrice(string price) {  this.priceValue = price; }
         public void setselectedRowIndex(int selectedRowIndex) { this.selectedRowIndex = selectedRowIndex; }
         public void setSearchRowIndex(int rowIndex) { this.searchRowIndex = rowIndex; }
+
 
         public string getId() { return idValue; }
         public string getName() { return nameValue; }
@@ -72,6 +73,28 @@ namespace FinalProject_DSA_v2
                 else { return false; }
             }
             return false;
+        }
+        public bool isTextboxEmpty(TextBox textBox) { return string.IsNullOrEmpty(textBox.Text); }
+
+        public bool isAnyTextboxEmpty(params TextBox[] textBoxes)
+        {
+            foreach (var textBox in textBoxes)
+            {
+                if (isTextboxEmpty(textBox)) { return true; }
+            }
+            return false;
+        }
+
+        public TextBox getEmptyTextboxName(params TextBox[] textBoxes)
+        {
+            foreach (var textBox in textBoxes)
+            {
+                if (isTextboxEmpty(textBox))
+                {
+                    return textBox;
+                }
+            }
+            return null;
         }
 
     }
