@@ -9,6 +9,8 @@ namespace FinalProject_DSA_v2
     public class matrixClass:valueClass
     {
         //IMPROVE MESSAGEBOX 
+        //ADD ICON FOR EXECUTABLE
+        //VALIDATE FOR SPACES
 
         //Declaracion de variables/atributos
         private int firstRow, lastRow, maxRows;
