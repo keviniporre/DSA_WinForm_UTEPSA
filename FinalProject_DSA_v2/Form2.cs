@@ -166,18 +166,18 @@ namespace FinalProject_DSA_v2
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            string defaultText = " Bs.";
+            //string defaultText = " Bs.";
 
             // Check if the textbox already contains the default text.
-            if (!txtPrice.Text.EndsWith(defaultText))
-            {
+            //if (!txtPrice.Text.EndsWith(defaultText))
+            //{
                 // Append the default text to the end of the textbox text.
-                txtPrice.Text += defaultText;
+             //   txtPrice.Text += defaultText;
 
                 // Set the cursor position to the end of the textbox text.
-                txtPrice.SelectionStart = txtPrice.Text.Length - 4;
-                txtPrice.SelectionLength = 0;
-            }
+            //    txtPrice.SelectionStart = txtPrice.Text.Length - 4;
+             //   txtPrice.SelectionLength = 0;
+            //}
         }
 
         private void Form2_Load(object sender, EventArgs e)
