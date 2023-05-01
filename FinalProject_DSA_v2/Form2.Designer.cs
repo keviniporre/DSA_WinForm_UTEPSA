@@ -163,6 +163,7 @@
             txtLength.Size = new Size(78, 23);
             txtLength.TabIndex = 9;
             txtLength.TextAlign = HorizontalAlignment.Right;
+            txtLength.TextChanged += txtLength_TextChanged;
             // 
             // txtPrice
             // 
@@ -171,6 +172,7 @@
             txtPrice.Size = new Size(77, 23);
             txtPrice.TabIndex = 11;
             txtPrice.TextAlign = HorizontalAlignment.Right;
+            txtPrice.TextChanged += txtPrice_TextChanged;
             // 
             // lblPrice
             // 
@@ -540,6 +542,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
             TransparencyKey = Color.FromArgb(10, 10, 10);
+            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvAll).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvFiltered).EndInit();

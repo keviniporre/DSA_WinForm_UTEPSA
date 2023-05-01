@@ -8,10 +8,6 @@ namespace FinalProject_DSA_v2
 {
     public class matrixClass:valueClass
     {
-        //IMPROVE MESSAGEBOX 
-        //ADD ICON FOR EXECUTABLE
-        //VALIDATE FOR SPACES
-
         //Declaracion de variables/atributos
         private int firstRow, lastRow, maxRows;
         private string[] container;
@@ -60,7 +56,7 @@ namespace FinalProject_DSA_v2
         {
             if (isMatrixFull())
             {
-                MessageBox.Show("The matrix is full");
+                MessageBox.Show("The matrix is full", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 matrixFull = true;
             }
             else
@@ -77,7 +73,7 @@ namespace FinalProject_DSA_v2
         {
             if (isMatrixEmpty() || getselectedRowIndex() == -1)
             {
-                MessageBox.Show("The Matrix is Empty or Invalid cell selected");
+                MessageBox.Show("The Matrix is Empty or Invalid cell selected", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -141,7 +137,7 @@ namespace FinalProject_DSA_v2
             grid.Rows.Clear();
             grid.Rows.Add();
 
-            if (getSearchRowIndex() == -1) { MessageBox.Show("Sorry, course not Found :("); }
+            if (getSearchRowIndex() == -1) { MessageBox.Show("Sorry, course not found.", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             {
                 for (int i = 0; i < 6; i++)

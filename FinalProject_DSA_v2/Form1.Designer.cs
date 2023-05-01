@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             ptbLogo = new PictureBox();
             lblHeaderF1 = new Label();
             txtNumberOfCourses = new TextBox();
@@ -233,6 +234,7 @@
             Controls.Add(ptbLogo);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";

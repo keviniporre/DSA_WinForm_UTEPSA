@@ -109,11 +109,11 @@ namespace FinalProject_DSA_v2
             if (library.isAnyTextboxEmpty(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice))
             {
                 TextBox emptyTextbox = library.getEmptyTextboxName(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
-                if (emptyTextbox != null) 
-                { 
+                if (emptyTextbox != null)
+                {
                     emptyTextbox.Focus();
                 }
-                MessageBox.Show("Please fill in all fields.");
+                MessageBox.Show("Please fill in all fields.", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -125,7 +125,7 @@ namespace FinalProject_DSA_v2
                 txtId.Focus();
             }
         }
-            
+
 
         private void btnClearSearch_Click(object sender, EventArgs e)
         {
@@ -145,9 +145,9 @@ namespace FinalProject_DSA_v2
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (library.isTextboxEmpty(txtId))
+            if (library.isTextboxEmpty(txtId) || library.isTextboxSpaces(txtId))
             {
-                MessageBox.Show("Please fill in the ID field.");
+                MessageBox.Show("Please fill in the ID field.", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -158,6 +158,32 @@ namespace FinalProject_DSA_v2
                 txtId.Text = library.getId();
                 txtId.Focus();
             }
+        }
+
+        private void txtLength_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            string defaultText = " Bs.";
+
+            // Check if the textbox already contains the default text.
+            if (!txtPrice.Text.EndsWith(defaultText))
+            {
+                // Append the default text to the end of the textbox text.
+                txtPrice.Text += defaultText;
+
+                // Set the cursor position to the end of the textbox text.
+                txtPrice.SelectionStart = txtPrice.Text.Length - 4;
+                txtPrice.SelectionLength = 0;
+            }
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            Icon myIcon = new Icon("C:\\Users\\kevin\\OneDrive\\Pictures\\Logos\\learnify.ico");
+            this.Icon = myIcon;
         }
     }
 }

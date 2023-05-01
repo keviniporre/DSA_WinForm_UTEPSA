@@ -9,10 +9,6 @@ namespace FinalProject_DSA_v2
     
     public class valueClass
     {
-        //IMPROVE MESSAGEBOX 
-        //ADD ICON FOR EXECUTABLE
-        //VALIDATE FOR SPACES
-
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
         private int selectedRowIndex, searchRowIndex;
@@ -31,7 +27,7 @@ namespace FinalProject_DSA_v2
             {
                 numberOfCourses = Convert.ToInt16(txtNumberCourses);
             }
-            else { MessageBox.Show("Please enter a valid integer number of courses."); }
+            else { MessageBox.Show("Please enter a valid number of courses.", "Learnify - Online Courses", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         public int getNumberOfCourses() {  return numberOfCourses; }
 
@@ -78,24 +74,25 @@ namespace FinalProject_DSA_v2
             }
             return false;
         }
-        public bool isTextboxEmpty(TextBox textBox) { return string.IsNullOrEmpty(textBox.Text); }
+        public bool isTextboxEmpty(TextBox txtEmpty) { return string.IsNullOrEmpty(txtEmpty.Text); }
+        public bool isTextboxSpaces(TextBox txtSpaces) { return string.IsNullOrWhiteSpace(txtSpaces.Text); }
 
-        public bool isAnyTextboxEmpty(params TextBox[] textBoxes)
+        public bool isAnyTextboxEmpty(params TextBox[] textboxes)
         {
-            foreach (var textBox in textBoxes)
+            foreach (var txtbox in textboxes)
             {
-                if (isTextboxEmpty(textBox)) { return true; }
+                if (isTextboxEmpty(txtbox) || isTextboxSpaces(txtbox)) { return true; }
             }
             return false;
         }
 
         public TextBox getEmptyTextboxName(params TextBox[] textBoxes)
         {
-            foreach (var textBox in textBoxes)
+            foreach (var textbox in textBoxes)
             {
-                if (isTextboxEmpty(textBox))
+                if (isTextboxEmpty(textbox) || isTextboxSpaces(textbox))
                 {
-                    return textBox;
+                    return textbox;
                 }
             }
             return null;
