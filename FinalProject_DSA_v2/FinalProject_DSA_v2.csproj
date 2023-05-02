@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="learnify.ico" />
+    <EmbeddedResource Include="learnify.ico" />
   </ItemGroup>
 
   <ItemGroup>

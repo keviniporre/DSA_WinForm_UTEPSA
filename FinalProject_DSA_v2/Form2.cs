@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -182,8 +183,14 @@ namespace FinalProject_DSA_v2
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            Icon myIcon = new Icon("C:\\Users\\kevin\\OneDrive\\Pictures\\Logos\\learnify.ico");
-            this.Icon = myIcon;
+            using (var ICON = Assembly.GetExecutingAssembly().GetManifestResourceStream("FinalProject_DSA_v2.learnify.ico"))
+            {
+                if (ICON != null)
+                {
+                    this.Icon = new Icon(ICON);
+                }
+            }
+
         }
     }
 }
