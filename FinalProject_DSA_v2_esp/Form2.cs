@@ -13,11 +13,11 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form2 : Form
     {
+        //Creamos una instancia (library) de la clase: matrixClass
         matrixClass library = new matrixClass();
         public Form2()
         {
             InitializeComponent();
-            lblRegisterCourses.Text = "Listo para registrar " + valueClass.numberOfCourses + " nuevos cursos";
         }
 
         private void btnAddToLibrary_MouseHover(object sender, EventArgs e)
@@ -32,6 +32,7 @@ namespace FinalProject_DSA_v2
 
         private void btnDeleteFromLibrary_Click(object sender, EventArgs e)
         {
+            //Llamada al metodo que elimina una fila, recibe un DataGridView como argumento.
             library.deleteRow(dtgvAll);
         }
 
@@ -82,6 +83,7 @@ namespace FinalProject_DSA_v2
 
         private void btnClose1_Click(object sender, EventArgs e)
         {
+            //Cierra el Form
             this.Close();
         }
 
@@ -107,8 +109,10 @@ namespace FinalProject_DSA_v2
 
         private void btnAddToLibrary_Click(object sender, EventArgs e)
         {
+            //Verifica si algun Textbox esta vacio
             if (library.isAnyTextboxEmpty(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice))
             {
+                //En caso de estar vacio algun Texbox vamos a obtener su nombre y enfocar el cursor ahi
                 TextBox emptyTextbox = library.getEmptyTextboxName(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
                 if (emptyTextbox != null)
                 {
@@ -118,6 +122,7 @@ namespace FinalProject_DSA_v2
             }
             else
             {
+                //En caso que ningun textbox este vacio se asignan los valores a las variables
                 library.setAllValues(txtId, txtName, txtInstructor, txtCategory, txtLength, txtPrice);
                 library.setValuesToContainer();
                 library.insertContainerToMatrix();
@@ -130,28 +135,34 @@ namespace FinalProject_DSA_v2
 
         private void btnClearSearch_Click(object sender, EventArgs e)
         {
+            //Limpiamos el DataGridView de las busquedas
             dtgvFiltered.Rows.Clear();
         }
 
         private void dtgvAll_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //Evento que asigna el valor del indice de una celda clickeada
             library.setselectedRowIndex(e.RowIndex);
         }
 
         private void btnEmptyLibrary_Click(object sender, EventArgs e)
         {
+            //Limpia el DataGridView y la matriz donde guardamos los datos
             library.emptyMatrix(dtgvAll);
             txtId.Focus();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            //Verifica si el campo del ID a buscar esta vacio
             if (library.isTextboxEmpty(txtId) || library.isTextboxSpaces(txtId))
             {
+                //De estar vacio manda mensaje de rellenar
                 MessageBox.Show("Por favor llene el campo del ID a buscar", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
+                //De tener un valor lo asigna, realiza la busqueda y lo muestra en el DataGridView de busqueda
                 library.setId(txtId);
                 library.searchItemRowIndex();
                 library.showSearchMatrix(dtgvFiltered);
@@ -167,30 +178,17 @@ namespace FinalProject_DSA_v2
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            //string defaultText = " Bs.";
-
-            // Check if the textbox already contains the default text.
-            //if (!txtPrice.Text.EndsWith(defaultText))
-            //{
-            // Append the default text to the end of the textbox text.
-            //   txtPrice.Text += defaultText;
-
-            // Set the cursor position to the end of the textbox text.
-            //    txtPrice.SelectionStart = txtPrice.Text.Length - 4;
-            //   txtPrice.SelectionLength = 0;
-            //}
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //Muestra en un Label la cantidad de cursos que se pueden agregar
+            lblRegisterCourses.Text = "Listo para registrar " + valueClass.numberOfCourses + " nuevos cursos";
+            //Carga el icono del Form al momento de carga
             using (var ICON = Assembly.GetExecutingAssembly().GetManifestResourceStream("FinalProject_DSA_v2.learnify.ico"))
             {
-                if (ICON != null)
-                {
-                    this.Icon = new Icon(ICON);
-                }
+                if (ICON != null) { this.Icon = new Icon(ICON); }
             }
-
         }
     }
 }
