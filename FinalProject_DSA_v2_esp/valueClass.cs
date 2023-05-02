@@ -93,7 +93,7 @@ namespace FinalProject_DSA_v2
             }
             return false;
         }
-        //Devuelve el textbox que esta vacio
+        //Devuelve el textbox que esta vacio de estar todos llenos devuelve null
         public TextBox getEmptyTextboxName(params TextBox[] textBoxes)
         {
             foreach (var textbox in textBoxes)

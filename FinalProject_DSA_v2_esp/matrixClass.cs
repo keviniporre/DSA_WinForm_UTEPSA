@@ -14,7 +14,7 @@ namespace FinalProject_DSA_v2
         private string[,] matrix;
         private bool matrixFull;
 
-        //Declaracion de Constructor
+        //Declaracion del Constructor
         public matrixClass()
         {
             firstRow = 0;
@@ -24,6 +24,7 @@ namespace FinalProject_DSA_v2
             matrix = new string[6, maxRows];
             matrixFull = false;
         }
+        //Asigna todos los valores a las variables correspondientes
         public void setAllValues(TextBox txtId, TextBox txtName, TextBox txtInstructor, TextBox txtCategory, TextBox txtLength, TextBox txtPrice)
         {
             setId(txtId);
@@ -33,6 +34,7 @@ namespace FinalProject_DSA_v2
             setLength(txtLength.Text);
             setPrice(txtPrice.Text);
         }
+        //Asigna los valores de las variables a un contenedor Array
         public void setValuesToContainer()
         {
             container[0] = getId();
@@ -42,18 +44,22 @@ namespace FinalProject_DSA_v2
             container[4] = getLength();
             container[5] = getPrice();
         }
+        //Verifica si la matriz esta vacia
         public bool isMatrixEmpty()
         {
             if (lastRow < firstRow) { return true; }
             else { return false; }
         }
+        //Verifica si la matriz esta llena
         public bool isMatrixFull()
         {
             if (lastRow == maxRows - 1) { return true; }
             else { return false; }
         }
+        //Inserta los valores del contenedor en la matriz
         public void insertContainerToMatrix()
         {
+            //Verifica primero se la matriz esta llena
             if (isMatrixFull())
             {
                 MessageBox.Show("La matriz esta llena", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -61,6 +67,7 @@ namespace FinalProject_DSA_v2
             }
             else
             {
+                //De no estar llena la matriz, agrega el contenedor array a la matriz
                 lastRow++;
                 for (int i = 0; i < 6; i++)
                 {
@@ -68,18 +75,20 @@ namespace FinalProject_DSA_v2
                 }
             }
         }
-        //Need to Move Items According to deleted cell
+        //Elimina una fila de la matriz y del DataGridView
         public void deleteRow(DataGridView grid)
         {
+            //Verifica si la matriz esta vacia o se selecciono un indice invalido
             if (isMatrixEmpty() || getselectedRowIndex() == -1)
             {
                 MessageBox.Show("La matriz esta vacia o seleccionaste una celda invalida", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+                //Elimina la fila del DataGridView que se clickeo
                 grid.Rows.RemoveAt(getselectedRowIndex());
 
-                //Deletes on Matrix
+                //Elimina de la matriz la fila correspondiente
                 for (int i = 0; i < 6; i++)
                 {
                     for (int j = getselectedRowIndex(); j < lastRow; j++)
@@ -87,7 +96,7 @@ namespace FinalProject_DSA_v2
                         matrix[i, j] = matrix[i, j+1];
                     }
                 }
-                //Empty last row
+                //Vacia o asigna a ceros el valor de la ultima fila de la matriz
                 for (int i = 0; i<6; i++)
                 {
                     matrix[i,lastRow] = string.Empty;
@@ -97,6 +106,7 @@ namespace FinalProject_DSA_v2
                 lastRow--;
             }
         }
+        //Muestra en el DataGridView el contenido de la matriz
         public void showOnGrid(DataGridView grid)
         {
             if (!matrixFull)
@@ -109,6 +119,7 @@ namespace FinalProject_DSA_v2
                 }
             }
         }
+        //Vacia el contenido de la matriz y limpia el DataGridView
         public void emptyMatrix(DataGridView grid)
         {
             grid.Rows.Clear();
@@ -123,6 +134,7 @@ namespace FinalProject_DSA_v2
                 }
             }
         }
+        //Busca el Indice de la fila que se busca
         public void searchItemRowIndex()
         {
             setSearchRowIndex(-1);
@@ -132,6 +144,7 @@ namespace FinalProject_DSA_v2
                 if (matrix[0,i] == getId()) { setSearchRowIndex(i); }
             }
         }
+        //Muestra en un DataGridView el resultado de la busqueda
         public void showSearchMatrix(DataGridView grid)
         {
             grid.Rows.Clear();
@@ -146,6 +159,7 @@ namespace FinalProject_DSA_v2
                 }
             }
         }
+        //Limpia todos los Texbox
         public void clearAllTextbox(TextBox txt1, TextBox txt2, TextBox txt3, TextBox txt4, TextBox txt5, TextBox txt6)
         {
             txt1.Text = txt2.Text = txt3.Text = txt4.Text = txt5.Text = txt6.Text = string.Empty;
