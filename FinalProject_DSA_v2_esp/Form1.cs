@@ -4,6 +4,7 @@ namespace FinalProject_DSA_v2
 {
     public partial class Form1 : Form
     {
+        //Creamos una instancia (Obj) de la clase: matrixClass
         matrixClass Obj = new matrixClass();
         public Form1()
         {
@@ -22,6 +23,7 @@ namespace FinalProject_DSA_v2
 
         private void btnClose1_Click(object sender, EventArgs e)
         {
+            //Cierra el Form
             this.Close();
         }
 
@@ -37,7 +39,9 @@ namespace FinalProject_DSA_v2
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
+            //Asigna a una variable el numero de cursos ingresado por el usuario
             Obj.setNumberOfCourses(txtNumberOfCourses.Text);
+            //Verifica que el numero sea mayor a cero
             if (Obj.isGreaterThanZero(txtNumberOfCourses.Text))
             {
                 txtNumberOfCourses.Text = string.Empty;
