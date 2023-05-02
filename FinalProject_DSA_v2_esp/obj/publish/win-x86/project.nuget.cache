@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "pSbaBJIeRJUIJTcEMGmHM2Zhqk5iNcnLmdzX+lqlRcMpEaVAe8Ehx9KA+CMfEN++g+7lyRT0ZtJDl9l8ThRZ4A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\OneDrive\\Documents\\GitHub\\DSA_WinForm_UTEPSA\\FinalProject_DSA_v2\\FinalProject_DSA_v2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.16\\microsoft.netcore.app.runtime.win-x86.6.0.16.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.16\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.16.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.16\\microsoft.aspnetcore.app.runtime.win-x86.6.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

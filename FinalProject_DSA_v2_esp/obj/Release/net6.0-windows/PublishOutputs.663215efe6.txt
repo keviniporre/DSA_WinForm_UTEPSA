@@ -1,0 +1,5 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Project\FinalProject_DSA_v2.exe
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Project\FinalProject_DSA_v2.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Project\FinalProject_DSA_v2.deps.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Project\FinalProject_DSA_v2.runtimeconfig.json
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Project\FinalProject_DSA_v2.pdb

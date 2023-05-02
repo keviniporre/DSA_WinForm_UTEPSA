@@ -1,0 +1,7 @@
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\FinalProject_DSA_v2.pdb
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\D3DCompiler_47_cor3.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\PenImc_cor3.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\PresentationNative_cor3.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\vcruntime140_cor3.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\wpfgfx_cor3.dll
+C:\Users\kevin\OneDrive\Documents\GitHub\DSA_WinForm_UTEPSA\Executables\DSA_Projectv2\FinalProject_DSA_v2.exe
