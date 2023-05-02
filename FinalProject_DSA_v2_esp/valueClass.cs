@@ -12,15 +12,17 @@ namespace FinalProject_DSA_v2
         //Declaracion de variables/atributos vacios
         private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
         private int selectedRowIndex, searchRowIndex;
+        //Declaracion de variable Global
         public static int numberOfCourses = 0;
 
-        //Declaracion Constructor
+        //Declaracion del Constructor
         public valueClass()
         {
             idValue = nameValue = instructorValue = categoryValue = lengthValue = priceValue = string.Empty;
             selectedRowIndex = searchRowIndex = -1;
         }
         //Declaracion Metodos SET Form 1
+        //Para asignar el numero de cursos verifica que sea un numero y mayor que cero.
         public void setNumberOfCourses(string txtNumberCourses) 
         { 
             if (isGreaterThanZero(txtNumberCourses))
@@ -29,6 +31,7 @@ namespace FinalProject_DSA_v2
             }
             else { MessageBox.Show("Por favor escriba un numero valido de cursos", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+        //Metodo Get que retorna el numero de cursos.
         public int getNumberOfCourses() {  return numberOfCourses; }
 
 
@@ -53,18 +56,21 @@ namespace FinalProject_DSA_v2
         public int getSearchRowIndex() {  return searchRowIndex; }
 
         //Metodos de Validacion
+        //Verifica si se puede convertir a un entero, de no poderse devuelve null.
         public int? ParseInt(string str)
         {
             int result;
             if (int.TryParse(str, out result)) { return result; }
             else { return null; }
         }
+        //Verifica si es un numero, retorna verdadero/falso
         public bool isNumber(string number)
         {
             int? parsedInt = ParseInt(number);
             if (parsedInt.HasValue) { return true; }
             else { return false; }
         }
+        //Verifica si el numero es mayor que cero
         public bool isGreaterThanZero(string number)
         {
             if (isNumber(number))
@@ -74,9 +80,11 @@ namespace FinalProject_DSA_v2
             }
             return false;
         }
+        //Verifica si el Texbox esta vacio
         public bool isTextboxEmpty(TextBox txtEmpty) { return string.IsNullOrEmpty(txtEmpty.Text); }
+        //Verifica si el Texbox esta lleno de espacios
         public bool isTextboxSpaces(TextBox txtSpaces) { return string.IsNullOrWhiteSpace(txtSpaces.Text); }
-
+        //Verifica si algun textbox esta vacio o lleno de espacios
         public bool isAnyTextboxEmpty(params TextBox[] textboxes)
         {
             foreach (var txtbox in textboxes)
@@ -85,7 +93,7 @@ namespace FinalProject_DSA_v2
             }
             return false;
         }
-
+        //Devuelve el textbox que esta vacio
         public TextBox getEmptyTextboxName(params TextBox[] textBoxes)
         {
             foreach (var textbox in textBoxes)
