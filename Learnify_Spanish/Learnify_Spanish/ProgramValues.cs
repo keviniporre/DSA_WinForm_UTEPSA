@@ -8,17 +8,31 @@ namespace Learnify_Spanish
 {
     public class ProgramValues
     {
-        //Declaracion de variables/atributos vacios
-        private string idValue, nameValue, instructorValue, categoryValue, lengthValue, priceValue;
-        private int selectedRowIndex, searchRowIndex;
         //Declaracion de variable Global
-        public static int numberOfCourses = 0;
+        public static int numeroDeCursos = 0;
+        //Declaracion de atributos frontend
+        private string idCurso, nombreCurso, instructorCurso, categoriaCurso, duracionCurso, precioCurso;
+        private int indiceFilaSeleccionada, indiceFilaBuscar;
+        //Declaracion de atributos backend
+        private int primerFila, ultimaFila, maximoDeFilas, cantidadColumnas;
+        private string[] contenedor;
+        private string[,] matriz;
+        private bool estaMatrizLlena;
 
         //Declaracion del Constructor
-        public valueClass()
+        public ProgramValues()
         {
-            idValue = nameValue = instructorValue = categoryValue = lengthValue = priceValue = string.Empty;
-            selectedRowIndex = searchRowIndex = -1;
+            //Set atributos Frontend
+            idCurso = nombreCurso = instructorCurso = categoriaCurso = duracionCurso = precioCurso = string.Empty;
+            indiceFilaSeleccionada = indiceFilaBuscar = -1;
+            //Set atributos Backend
+            cantidadColumnas = 6;
+            primerFila = 0;
+            ultimaFila = -1;
+            maximoDeFilas = getNumberOfCourses();
+            contenedor = new string[cantidadColumnas];
+            matriz = new string[cantidadColumnas, maximoDeFilas];
+            estaMatrizLlena = false;
         }
         //Declaracion Metodos SET Form 1
         //Para asignar el numero de cursos verifica que sea un numero y mayor que cero.

@@ -156,6 +156,7 @@ namespace Learnify_Spanish
                 for (int i = 0; i < 6; i++)
                 {
                     grid.Rows[0].Cells[i].Value = matrix[i, getSearchRowIndex()];
+                    //Change sometime
                 }
             }
         }
