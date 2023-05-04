@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnMinimize = new Button();
             btnClose1 = new Button();
             ptbBook = new PictureBox();
@@ -221,6 +222,7 @@
             Controls.Add(lblHeaderF1);
             Controls.Add(ptbLogo);
             DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";

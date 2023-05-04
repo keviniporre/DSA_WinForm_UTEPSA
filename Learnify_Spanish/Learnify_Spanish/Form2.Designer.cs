@@ -514,6 +514,7 @@
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
+            Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dtgvBusqueda).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvLibreria).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
