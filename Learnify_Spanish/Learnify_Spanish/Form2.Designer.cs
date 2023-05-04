@@ -188,6 +188,7 @@
             btnEliminarDeLibreria.TabIndex = 47;
             btnEliminarDeLibreria.Text = "Eliminar de libreria";
             btnEliminarDeLibreria.UseVisualStyleBackColor = false;
+            btnEliminarDeLibreria.Click += btnEliminarDeLibreria_Click;
             // 
             // lblFiltered
             // 
@@ -353,6 +354,7 @@
             btnAgregarEnLibreria.TabIndex = 40;
             btnAgregarEnLibreria.Text = "Agregar a libreria";
             btnAgregarEnLibreria.UseVisualStyleBackColor = false;
+            btnAgregarEnLibreria.Click += btnAgregarEnLibreria_Click;
             // 
             // pictureBox1
             // 
@@ -482,7 +484,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(800, 641);
+            ClientSize = new Size(780, 641);
             Controls.Add(btnClose1);
             Controls.Add(btnMinimizeF2);
             Controls.Add(lblLibrary);

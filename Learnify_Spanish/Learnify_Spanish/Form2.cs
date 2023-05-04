@@ -13,6 +13,9 @@ namespace Learnify_Spanish
 {
     public partial class Form2 : Form
     {
+        //Creamos una instancia de la clase ProgramAction
+        ProgramActions Learnify = new ProgramActions();
+
         public Form2()
         {
             InitializeComponent();
@@ -28,6 +31,34 @@ namespace Learnify_Spanish
             {
                 if (ICON != null) { this.Icon = new Icon(ICON); }
             }
+        }
+
+        private void btnAgregarEnLibreria_Click(object sender, EventArgs e)
+        {
+            if (Learnify.estaAlgunTextboxVacio(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio))
+            {
+                TextBox? textBoxVacio = Learnify.getNombreTextboxVacio(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                if (textBoxVacio != null) { textBoxVacio.Focus(); }
+                MessageBox.Show("Por favor llene todos campos.", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (Learnify.estaMatrizLlena()) { MessageBox.Show("La matriz esta llena", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                else
+                {
+                    Learnify.setTodosLosValores(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                    Learnify.setValoresEnContenedor();
+                    Learnify.insertarContenedorEnMatriz();
+                    Learnify.agregarEnGridView(dtgvLibreria);
+                    //clear focus
+                }
+            }
+        }
+
+        private void btnEliminarDeLibreria_Click(object sender, EventArgs e)
+        {
+            Learnify.eliminarFilaEnGridView(dtgvLibreria);
+            Learnify.eliminarFilaEnMatriz();
         }
     }
 }

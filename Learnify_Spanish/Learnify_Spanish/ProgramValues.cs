@@ -14,10 +14,10 @@ namespace Learnify_Spanish
         private string idCurso, nombreCurso, instructorCurso, categoriaCurso, duracionCurso, precioCurso;
         private int indiceFilaSeleccionada, indiceFilaBuscar;
         //Declaracion de atributos backend
-        private int primerFila, ultimaFila, maximoDeFilas, cantidadColumnas;
-        private string[] contenedor;
-        private string[,] matriz;
-        private bool estaMatrizLlena;
+        public int primerFila, ultimaFila, maximoDeFilas, cantidadColumnas;
+        public string[] contenedor;
+        public string[,] matriz;
+        public bool MatrizLlena;
 
         //Declaracion del Constructor
         public ProgramValues()
@@ -32,7 +32,7 @@ namespace Learnify_Spanish
             maximoDeFilas = getNumeroDeCursos();
             contenedor = new string[cantidadColumnas];
             matriz = new string[cantidadColumnas, maximoDeFilas];
-            estaMatrizLlena = false;
+            MatrizLlena = false;
         }
         //Declaracion Metodos SET
         public void setNumeroDeCursos(string txtNumeroDeCursos) { numeroDeCursos = Convert.ToInt32(txtNumeroDeCursos); }
