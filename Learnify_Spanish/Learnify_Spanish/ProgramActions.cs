@@ -48,19 +48,19 @@ namespace Learnify_Spanish
 
         public void eliminarFilaEnGridView(DataGridView gridView)
         {
-            gridView.Rows.RemoveAt();
+            gridView.Rows.RemoveAt(getIndiceFilaSeleccionada());
         }
         public void eliminarFilaEnMatriz()
         {
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < cantidadColumnas; i++)
             {
-                for (int j = getselectedRowIndex(); j < ultimaFila; j++)
+                for (int j = getIndiceFilaSeleccionada() ; j < ultimaFila ; j++)
                 {
                     matriz[i, j] = matriz[i, j + 1];
                 }
             }
             //Vacia o asigna a ceros el valor de la ultima fila de la matriz
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < cantidadColumnas ; i++)
             {
                 matriz[i, ultimaFila] = string.Empty;
             }
@@ -74,6 +74,12 @@ namespace Learnify_Spanish
                 gridView.Rows[ultimaFila].Cells[i].Value = matriz[i, ultimaFila];
             }
         }
-        public
+        public void limpiarTexboxes(params TextBox[] textboxes)
+        {
+            foreach (var textbox in textboxes)
+            {
+                textbox.Text = string.Empty;
+            }
+        }
     }
 }

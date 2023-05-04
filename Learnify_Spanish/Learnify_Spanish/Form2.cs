@@ -50,7 +50,8 @@ namespace Learnify_Spanish
                     Learnify.setValoresEnContenedor();
                     Learnify.insertarContenedorEnMatriz();
                     Learnify.agregarEnGridView(dtgvLibreria);
-                    //clear focus
+                    Learnify.limpiarTexboxes(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                    txtId.Focus();
                 }
             }
         }
