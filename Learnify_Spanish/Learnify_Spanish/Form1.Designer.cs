@@ -204,6 +204,7 @@
             // 
             // Form1
             // 
+            AcceptButton = btnGetStarted;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;

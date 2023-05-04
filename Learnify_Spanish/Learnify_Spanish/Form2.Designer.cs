@@ -137,6 +137,7 @@
             btnLimpiarBusqueda.TabIndex = 50;
             btnLimpiarBusqueda.Text = "Limpiar busqueda";
             btnLimpiarBusqueda.UseVisualStyleBackColor = false;
+            btnLimpiarBusqueda.Click += btnLimpiarBusqueda_Click;
             // 
             // btnBuscar
             // 
@@ -154,6 +155,7 @@
             btnBuscar.TabIndex = 49;
             btnBuscar.Text = "Buscar curso";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnVaciarLibreria
             // 
@@ -171,6 +173,7 @@
             btnVaciarLibreria.TabIndex = 48;
             btnVaciarLibreria.Text = "Vaciar libreia";
             btnVaciarLibreria.UseVisualStyleBackColor = false;
+            btnVaciarLibreria.Click += btnVaciarLibreria_Click;
             // 
             // btnEliminarDeLibreria
             // 
@@ -265,6 +268,7 @@
             dtgvLibreria.RowTemplate.Height = 30;
             dtgvLibreria.Size = new Size(620, 241);
             dtgvLibreria.TabIndex = 44;
+            dtgvLibreria.CellClick += dtgvLibreria_CellClick;
             // 
             // IdCol
             // 
@@ -480,6 +484,7 @@
             // 
             // Form2
             // 
+            AcceptButton = btnAgregarEnLibreria;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;

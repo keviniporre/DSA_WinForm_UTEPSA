@@ -81,5 +81,39 @@ namespace Learnify_Spanish
                 textbox.Text = string.Empty;
             }
         }
+        public void vaciarMatriz()
+        {
+            for (int i = 0; i < cantidadColumnas; i++)
+            {
+                for (int j = 0; j <= ultimaFila; j++)
+                {
+                    matriz[i, j] = string.Empty;
+                }
+            }
+            ultimaFila = -1;
+        }
+        public void buscarIndiceDelCurso()
+        {
+            setIndiceFilaBuscar(-1);
+
+            for (int i = 0; i <= ultimaFila; i++)
+            {
+                if (matriz[0, i] == getId()) { setIndiceFilaBuscar(i); }
+            }
+        }
+        public void mostrarEnGridView(DataGridView gridView)
+        {
+            gridView.Rows.Clear();
+            gridView.Rows.Add();
+
+            if (getIndiceFilaBuscar() == -1) { MessageBox.Show("Lo siento, ese ID de curso no existe", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else
+            {
+                for (int i = 0; i < 6; i++)
+                {
+                    gridView.Rows[0].Cells[i].Value = matriz[i, getIndiceFilaBuscar()];
+                }
+            }
+        }
     }
 }

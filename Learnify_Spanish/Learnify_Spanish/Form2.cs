@@ -61,5 +61,34 @@ namespace Learnify_Spanish
             Learnify.eliminarFilaEnGridView(dtgvLibreria);
             Learnify.eliminarFilaEnMatriz();
         }
+
+        private void dtgvLibreria_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Learnify.setIndiceFilaSeleccionada(e.RowIndex);
+        }
+
+        private void btnVaciarLibreria_Click(object sender, EventArgs e)
+        {
+            dtgvLibreria.Rows.Clear();
+            Learnify.vaciarMatriz();
+        }
+
+        private void btnLimpiarBusqueda_Click(object sender, EventArgs e)
+        {
+            dtgvBusqueda.Rows.Clear();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (Learnify.estaTextboxVacio(txtId)) { MessageBox.Show("Por favor llene el campo del ID a buscar", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            else
+            {
+                Learnify.setId(txtId);
+                Learnify.buscarIndiceDelCurso();
+                Learnify.mostrarEnGridView(dtgvBusqueda);
+                Learnify.limpiarTexboxes(txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                txtId.Focus();
+            }
+        }
     }
 }
