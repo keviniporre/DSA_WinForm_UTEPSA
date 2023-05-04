@@ -10,7 +10,7 @@ namespace Learnify_Spanish
 
         private void btnGetStarted_Click(object sender, EventArgs e)
         {
-            if (instanciaValores.isGreaterThanZero(txtNumeroDeCursos.Text))
+            if (instanciaValores.esMayorQueCero(txtNumeroDeCursos.Text))
             {
                 instanciaValores.setNumeroDeCursos(txtNumeroDeCursos.Text);
                 txtNumeroDeCursos.Text = string.Empty;

@@ -87,7 +87,7 @@
             ptbBook.BackColor = Color.Transparent;
             ptbBook.BackgroundImage = Properties.Resources.bookLogo;
             ptbBook.BackgroundImageLayout = ImageLayout.Zoom;
-            ptbBook.Location = new Point(92, 288);
+            ptbBook.Location = new Point(120, 284);
             ptbBook.Name = "ptbBook";
             ptbBook.Size = new Size(120, 94);
             ptbBook.TabIndex = 23;
@@ -99,7 +99,7 @@
             lblRegisterCourse.BackColor = Color.Transparent;
             lblRegisterCourse.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblRegisterCourse.ForeColor = SystemColors.MenuBar;
-            lblRegisterCourse.Location = new Point(251, 294);
+            lblRegisterCourse.Location = new Point(279, 290);
             lblRegisterCourse.Name = "lblRegisterCourse";
             lblRegisterCourse.Size = new Size(179, 15);
             lblRegisterCourse.TabIndex = 22;
@@ -110,7 +110,7 @@
             lblToAdd.AutoSize = true;
             lblToAdd.BackColor = Color.Transparent;
             lblToAdd.ForeColor = SystemColors.MenuBar;
-            lblToAdd.Location = new Point(251, 324);
+            lblToAdd.Location = new Point(279, 320);
             lblToAdd.Name = "lblToAdd";
             lblToAdd.Size = new Size(94, 15);
             lblToAdd.TabIndex = 21;
@@ -121,7 +121,7 @@
             lblHowMany.AutoSize = true;
             lblHowMany.BackColor = Color.Transparent;
             lblHowMany.ForeColor = SystemColors.MenuBar;
-            lblHowMany.Location = new Point(251, 309);
+            lblHowMany.Location = new Point(279, 305);
             lblHowMany.Name = "lblHowMany";
             lblHowMany.Size = new Size(146, 15);
             lblHowMany.TabIndex = 20;
@@ -132,7 +132,7 @@
             lblSubheaderF1.AutoSize = true;
             lblSubheaderF1.BackColor = Color.Transparent;
             lblSubheaderF1.ForeColor = SystemColors.MenuBar;
-            lblSubheaderF1.Location = new Point(193, 232);
+            lblSubheaderF1.Location = new Point(218, 217);
             lblSubheaderF1.Name = "lblSubheaderF1";
             lblSubheaderF1.Size = new Size(134, 15);
             lblSubheaderF1.TabIndex = 19;
@@ -149,7 +149,7 @@
             btnGetStarted.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnGetStarted.ForeColor = Color.Snow;
             btnGetStarted.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGetStarted.Location = new Point(320, 342);
+            btnGetStarted.Location = new Point(348, 338);
             btnGetStarted.Name = "btnGetStarted";
             btnGetStarted.Size = new Size(90, 23);
             btnGetStarted.TabIndex = 18;
@@ -172,7 +172,7 @@
             // 
             txtNumeroDeCursos.BackColor = Color.Snow;
             txtNumeroDeCursos.Cursor = Cursors.IBeam;
-            txtNumeroDeCursos.Location = new Point(251, 342);
+            txtNumeroDeCursos.Location = new Point(279, 338);
             txtNumeroDeCursos.Name = "txtNumeroDeCursos";
             txtNumeroDeCursos.Size = new Size(63, 23);
             txtNumeroDeCursos.TabIndex = 16;
@@ -184,7 +184,7 @@
             lblHeaderF1.BackColor = Color.Transparent;
             lblHeaderF1.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblHeaderF1.ForeColor = SystemColors.ControlLight;
-            lblHeaderF1.Location = new Point(67, 202);
+            lblHeaderF1.Location = new Point(92, 187);
             lblHeaderF1.Name = "lblHeaderF1";
             lblHeaderF1.Size = new Size(402, 30);
             lblHeaderF1.TabIndex = 15;
@@ -195,7 +195,7 @@
             ptbLogo.BackColor = Color.Transparent;
             ptbLogo.BackgroundImage = Properties.Resources.logolearnifyV2;
             ptbLogo.BackgroundImageLayout = ImageLayout.Zoom;
-            ptbLogo.Location = new Point(193, 62);
+            ptbLogo.Location = new Point(207, 56);
             ptbLogo.Name = "ptbLogo";
             ptbLogo.Size = new Size(156, 112);
             ptbLogo.TabIndex = 14;
@@ -222,7 +222,8 @@
             Controls.Add(ptbLogo);
             DoubleBuffered = true;
             Name = "Form1";
-            Text = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Learnify";
             ((System.ComponentModel.ISupportInitialize)ptbBook).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             ResumeLayout(false);
