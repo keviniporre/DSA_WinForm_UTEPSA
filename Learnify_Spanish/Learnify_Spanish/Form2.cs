@@ -46,12 +46,21 @@ namespace Learnify_Spanish
                 if (Learnify.estaMatrizLlena()) { MessageBox.Show("La matriz esta llena", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                 else
                 {
-                    Learnify.setTodosLosValores(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
-                    Learnify.setValoresEnContenedor();
-                    Learnify.insertarContenedorEnMatriz();
-                    Learnify.agregarEnGridView(dtgvLibreria);
-                    Learnify.limpiarTexboxes(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
-                    txtId.Focus();
+                    if (Learnify.buscarSiYaExiste(txtId.Text)) 
+                    { 
+                        MessageBox.Show("El codigo ID del curso ya existe", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                        txtId.Focus();
+                        txtId.SelectAll();
+                    }
+                    else
+                    {
+                        Learnify.setTodosLosValores(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                        Learnify.setValoresEnContenedor();
+                        Learnify.insertarContenedorEnMatriz();
+                        Learnify.agregarEnGridView(dtgvLibreria);
+                        Learnify.limpiarTexboxes(txtId, txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
+                        txtId.Focus();
+                    }
                 }
             }
         }
@@ -96,9 +105,15 @@ namespace Learnify_Spanish
             {
                 Learnify.setId(txtId);
                 Learnify.buscarIndiceDelCurso();
-                Learnify.mostrarEnGridView(dtgvBusqueda);
+                if (Learnify.getIndiceFilaBuscar() == -1) 
+                { 
+                    MessageBox.Show("Lo siento, ese ID de curso no existe", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else { Learnify.mostrarEnGridView(dtgvBusqueda); }
+
                 Learnify.limpiarTexboxes(txtNombre, txtInstructor, txtCategoria, txtDuracion, txtPrecio);
                 txtId.Focus();
+                txtId.SelectAll();
             }
         }
 

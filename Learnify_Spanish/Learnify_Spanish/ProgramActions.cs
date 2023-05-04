@@ -101,19 +101,23 @@ namespace Learnify_Spanish
                 if (matriz[0, i] == getId()) { setIndiceFilaBuscar(i); }
             }
         }
+        public bool buscarSiYaExiste(string txtdelID)
+        {
+            for (int i = 0; i <= ultimaFila; i++)
+            {
+                if (matriz[0, i] == txtdelID) { return true; }
+            }
+            return false;
+        }
         public void mostrarEnGridView(DataGridView gridView)
         {
             gridView.Rows.Clear();
             gridView.Rows.Add();
 
-            if (getIndiceFilaBuscar() == -1) { MessageBox.Show("Lo siento, ese ID de curso no existe", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-            else
-            {
-                for (int i = 0; i < cantidadColumnas; i++)
+            for (int i = 0; i < cantidadColumnas; i++)
                 {
                     gridView.Rows[0].Cells[i].Value = matriz[i, getIndiceFilaBuscar()];
                 }
-            }
         }
     }
 }

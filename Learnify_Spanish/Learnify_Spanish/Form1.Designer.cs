@@ -78,7 +78,7 @@
             btnCerrarF1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarF1.ForeColor = Color.Snow;
             btnCerrarF1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarF1.Location = new Point(531, 7);
+            btnCerrarF1.Location = new Point(531, 8);
             btnCerrarF1.Name = "btnCerrarF1";
             btnCerrarF1.Size = new Size(24, 29);
             btnCerrarF1.TabIndex = 24;
