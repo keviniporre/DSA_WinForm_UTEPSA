@@ -54,7 +54,7 @@ namespace Learnify_Spanish
         {
             for (int i = 0; i < cantidadColumnas; i++)
             {
-                for (int j = getIndiceFilaSeleccionada() ; j <= ultimaFila ; j++)
+                for (int j = getIndiceFilaSeleccionada() ; j < ultimaFila ; j++)
                 {
                     matriz[i, j] = matriz[i, j + 1];
                 }
@@ -109,7 +109,7 @@ namespace Learnify_Spanish
             if (getIndiceFilaBuscar() == -1) { MessageBox.Show("Lo siento, ese ID de curso no existe", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             {
-                for (int i = 0; i < 6; i++)
+                for (int i = 0; i < cantidadColumnas; i++)
                 {
                     gridView.Rows[0].Cells[i].Value = matriz[i, getIndiceFilaBuscar()];
                 }

@@ -58,7 +58,7 @@ namespace Learnify_Spanish
 
         private void btnEliminarDeLibreria_Click(object sender, EventArgs e)
         {
-            if (Learnify.estaMatrizVacia() || Learnify.getIndiceFilaSeleccionada() == -1)
+            if (Learnify.estaMatrizVacia() || Learnify.getIndiceFilaSeleccionada() == Learnify.ultimaFila + 1 || Learnify.getIndiceFilaSeleccionada() == -1)
             {
                 MessageBox.Show("La matriz esta vacia o seleccionaste una celda invalida", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -66,6 +66,7 @@ namespace Learnify_Spanish
             {
                 Learnify.eliminarFilaEnGridView(dtgvLibreria);
                 Learnify.eliminarFilaEnMatriz();
+                dtgvBusqueda.Rows.Clear();
                 txtId.Focus();
             }
         }
@@ -79,6 +80,7 @@ namespace Learnify_Spanish
         {
             dtgvLibreria.Rows.Clear();
             Learnify.vaciarMatriz();
+            dtgvBusqueda.Rows.Clear();
             txtId.Focus();
         }
 

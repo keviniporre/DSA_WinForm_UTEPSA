@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             btnCerrarF2 = new Button();
             btnMinimizarF2 = new Button();
             lblLibrary = new Label();
@@ -83,7 +84,7 @@
             btnCerrarF2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnCerrarF2.ForeColor = Color.Snow;
             btnCerrarF2.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarF2.Location = new Point(719, 25);
+            btnCerrarF2.Location = new Point(696, 6);
             btnCerrarF2.Name = "btnCerrarF2";
             btnCerrarF2.Size = new Size(24, 27);
             btnCerrarF2.TabIndex = 53;
@@ -103,7 +104,7 @@
             btnMinimizarF2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizarF2.ForeColor = Color.Snow;
             btnMinimizarF2.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMinimizarF2.Location = new Point(688, 28);
+            btnMinimizarF2.Location = new Point(665, 9);
             btnMinimizarF2.Name = "btnMinimizarF2";
             btnMinimizarF2.Size = new Size(28, 23);
             btnMinimizarF2.TabIndex = 52;
@@ -117,7 +118,7 @@
             lblLibrary.AutoSize = true;
             lblLibrary.BackColor = Color.Transparent;
             lblLibrary.ForeColor = SystemColors.MenuBar;
-            lblLibrary.Location = new Point(84, 269);
+            lblLibrary.Location = new Point(61, 250);
             lblLibrary.Name = "lblLibrary";
             lblLibrary.Size = new Size(104, 15);
             lblLibrary.TabIndex = 51;
@@ -133,7 +134,7 @@
             btnLimpiarBusqueda.FlatStyle = FlatStyle.Flat;
             btnLimpiarBusqueda.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnLimpiarBusqueda.ForeColor = Color.Snow;
-            btnLimpiarBusqueda.Location = new Point(220, 238);
+            btnLimpiarBusqueda.Location = new Point(197, 219);
             btnLimpiarBusqueda.Name = "btnLimpiarBusqueda";
             btnLimpiarBusqueda.Size = new Size(116, 23);
             btnLimpiarBusqueda.TabIndex = 50;
@@ -151,7 +152,7 @@
             btnBuscar.FlatStyle = FlatStyle.Flat;
             btnBuscar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnBuscar.ForeColor = Color.Snow;
-            btnBuscar.Location = new Point(80, 238);
+            btnBuscar.Location = new Point(57, 219);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(134, 23);
             btnBuscar.TabIndex = 49;
@@ -169,11 +170,11 @@
             btnVaciarLibreria.FlatStyle = FlatStyle.Flat;
             btnVaciarLibreria.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnVaciarLibreria.ForeColor = Color.Snow;
-            btnVaciarLibreria.Location = new Point(452, 238);
+            btnVaciarLibreria.Location = new Point(429, 219);
             btnVaciarLibreria.Name = "btnVaciarLibreria";
             btnVaciarLibreria.Size = new Size(119, 23);
             btnVaciarLibreria.TabIndex = 48;
-            btnVaciarLibreria.Text = "Vaciar libreia";
+            btnVaciarLibreria.Text = "Vaciar libreria";
             btnVaciarLibreria.UseVisualStyleBackColor = false;
             btnVaciarLibreria.Click += btnVaciarLibreria_Click;
             // 
@@ -187,7 +188,7 @@
             btnEliminarDeLibreria.FlatStyle = FlatStyle.Flat;
             btnEliminarDeLibreria.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnEliminarDeLibreria.ForeColor = Color.Snow;
-            btnEliminarDeLibreria.Location = new Point(578, 238);
+            btnEliminarDeLibreria.Location = new Point(555, 219);
             btnEliminarDeLibreria.Name = "btnEliminarDeLibreria";
             btnEliminarDeLibreria.Size = new Size(126, 23);
             btnEliminarDeLibreria.TabIndex = 47;
@@ -200,7 +201,7 @@
             lblFiltered.AutoSize = true;
             lblFiltered.BackColor = Color.Transparent;
             lblFiltered.ForeColor = SystemColors.MenuBar;
-            lblFiltered.Location = new Point(84, 531);
+            lblFiltered.Location = new Point(61, 531);
             lblFiltered.Name = "lblFiltered";
             lblFiltered.Size = new Size(133, 15);
             lblFiltered.TabIndex = 46;
@@ -213,7 +214,7 @@
             dtgvBusqueda.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dtgvBusqueda.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvBusqueda.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
-            dtgvBusqueda.Location = new Point(84, 549);
+            dtgvBusqueda.Location = new Point(61, 549);
             dtgvBusqueda.MinimumSize = new Size(40, 20);
             dtgvBusqueda.Name = "dtgvBusqueda";
             dtgvBusqueda.RowTemplate.Height = 30;
@@ -264,11 +265,11 @@
             dtgvLibreria.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dtgvLibreria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dtgvLibreria.Columns.AddRange(new DataGridViewColumn[] { IdCol, nameCol, instructorCol, categoryCol, lengthCol, priceCol });
-            dtgvLibreria.Location = new Point(84, 287);
+            dtgvLibreria.Location = new Point(61, 268);
             dtgvLibreria.MinimumSize = new Size(40, 20);
             dtgvLibreria.Name = "dtgvLibreria";
             dtgvLibreria.RowTemplate.Height = 30;
-            dtgvLibreria.Size = new Size(620, 241);
+            dtgvLibreria.Size = new Size(620, 260);
             dtgvLibreria.TabIndex = 44;
             dtgvLibreria.CellClick += dtgvLibreria_CellClick;
             // 
@@ -314,7 +315,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.ForeColor = SystemColors.MenuBar;
-            label2.Location = new Point(315, 112);
+            label2.Location = new Point(292, 93);
             label2.Name = "label2";
             label2.Size = new Size(244, 15);
             label2.TabIndex = 43;
@@ -326,7 +327,7 @@
             lblRegisterCourses.BackColor = Color.Transparent;
             lblRegisterCourses.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblRegisterCourses.ForeColor = SystemColors.MenuBar;
-            lblRegisterCourses.Location = new Point(315, 97);
+            lblRegisterCourses.Location = new Point(292, 78);
             lblRegisterCourses.Name = "lblRegisterCourses";
             lblRegisterCourses.Size = new Size(195, 15);
             lblRegisterCourses.TabIndex = 42;
@@ -338,7 +339,7 @@
             lblHeaderF2.BackColor = Color.Transparent;
             lblHeaderF2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblHeaderF2.ForeColor = SystemColors.MenuBar;
-            lblHeaderF2.Location = new Point(315, 58);
+            lblHeaderF2.Location = new Point(292, 39);
             lblHeaderF2.Name = "lblHeaderF2";
             lblHeaderF2.Size = new Size(402, 30);
             lblHeaderF2.TabIndex = 41;
@@ -354,7 +355,7 @@
             btnAgregarEnLibreria.FlatStyle = FlatStyle.Flat;
             btnAgregarEnLibreria.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnAgregarEnLibreria.ForeColor = Color.Snow;
-            btnAgregarEnLibreria.Location = new Point(578, 209);
+            btnAgregarEnLibreria.Location = new Point(555, 190);
             btnAgregarEnLibreria.Name = "btnAgregarEnLibreria";
             btnAgregarEnLibreria.Size = new Size(126, 23);
             btnAgregarEnLibreria.TabIndex = 40;
@@ -367,7 +368,7 @@
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.BackgroundImage = Properties.Resources.logolearnifyV2;
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(84, 58);
+            pictureBox1.Location = new Point(61, 39);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(193, 156);
             pictureBox1.TabIndex = 39;
@@ -375,7 +376,7 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(494, 209);
+            txtPrecio.Location = new Point(471, 190);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(77, 23);
             txtPrecio.TabIndex = 38;
@@ -386,7 +387,7 @@
             lblPrice.AutoSize = true;
             lblPrice.BackColor = Color.Transparent;
             lblPrice.ForeColor = SystemColors.MenuBar;
-            lblPrice.Location = new Point(452, 212);
+            lblPrice.Location = new Point(429, 193);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(43, 15);
             lblPrice.TabIndex = 37;
@@ -394,7 +395,7 @@
             // 
             // txtDuracion
             // 
-            txtDuracion.Location = new Point(372, 209);
+            txtDuracion.Location = new Point(349, 190);
             txtDuracion.Name = "txtDuracion";
             txtDuracion.Size = new Size(78, 23);
             txtDuracion.TabIndex = 36;
@@ -405,7 +406,7 @@
             lblLength.AutoSize = true;
             lblLength.BackColor = Color.Transparent;
             lblLength.ForeColor = SystemColors.MenuBar;
-            lblLength.Location = new Point(315, 212);
+            lblLength.Location = new Point(292, 193);
             lblLength.Name = "lblLength";
             lblLength.Size = new Size(58, 15);
             lblLength.TabIndex = 35;
@@ -413,7 +414,7 @@
             // 
             // txtCategoria
             // 
-            txtCategoria.Location = new Point(603, 180);
+            txtCategoria.Location = new Point(580, 161);
             txtCategoria.Name = "txtCategoria";
             txtCategoria.Size = new Size(101, 23);
             txtCategoria.TabIndex = 34;
@@ -423,7 +424,7 @@
             lblCategory.AutoSize = true;
             lblCategory.BackColor = Color.Transparent;
             lblCategory.ForeColor = SystemColors.MenuBar;
-            lblCategory.Location = new Point(539, 183);
+            lblCategory.Location = new Point(516, 164);
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(61, 15);
             lblCategory.TabIndex = 33;
@@ -431,7 +432,7 @@
             // 
             // txtInstructor
             // 
-            txtInstructor.Location = new Point(382, 180);
+            txtInstructor.Location = new Point(359, 161);
             txtInstructor.Name = "txtInstructor";
             txtInstructor.Size = new Size(151, 23);
             txtInstructor.TabIndex = 32;
@@ -441,7 +442,7 @@
             lblInstructor.AutoSize = true;
             lblInstructor.BackColor = Color.Transparent;
             lblInstructor.ForeColor = SystemColors.MenuBar;
-            lblInstructor.Location = new Point(315, 183);
+            lblInstructor.Location = new Point(292, 164);
             lblInstructor.Name = "lblInstructor";
             lblInstructor.Size = new Size(61, 15);
             lblInstructor.TabIndex = 31;
@@ -449,14 +450,14 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(452, 151);
+            txtNombre.Location = new Point(429, 132);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(252, 23);
             txtNombre.TabIndex = 30;
             // 
             // txtId
             // 
-            txtId.Location = new Point(342, 151);
+            txtId.Location = new Point(319, 132);
             txtId.Name = "txtId";
             txtId.Size = new Size(54, 23);
             txtId.TabIndex = 29;
@@ -467,7 +468,7 @@
             lblName.AutoSize = true;
             lblName.BackColor = Color.Transparent;
             lblName.ForeColor = SystemColors.MenuBar;
-            lblName.Location = new Point(399, 154);
+            lblName.Location = new Point(376, 135);
             lblName.Name = "lblName";
             lblName.Size = new Size(54, 15);
             lblName.TabIndex = 28;
@@ -478,7 +479,7 @@
             lblId.AutoSize = true;
             lblId.BackColor = Color.Transparent;
             lblId.ForeColor = SystemColors.MenuBar;
-            lblId.Location = new Point(315, 154);
+            lblId.Location = new Point(292, 135);
             lblId.Name = "lblId";
             lblId.Size = new Size(21, 15);
             lblId.TabIndex = 27;
@@ -489,9 +490,11 @@
             AcceptButton = btnAgregarEnLibreria;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(780, 641);
+            CancelButton = btnCerrarF2;
+            ClientSize = new Size(750, 641);
             Controls.Add(btnCerrarF2);
             Controls.Add(btnMinimizarF2);
             Controls.Add(lblLibrary);
@@ -520,9 +523,12 @@
             Controls.Add(lblName);
             Controls.Add(lblId);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form2";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
+            TransparencyKey = Color.Black;
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)dtgvBusqueda).EndInit();
             ((System.ComponentModel.ISupportInitialize)dtgvLibreria).EndInit();
