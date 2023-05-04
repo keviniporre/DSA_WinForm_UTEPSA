@@ -56,14 +56,16 @@
             btnMinimizarF1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnMinimizarF1.ForeColor = Color.Snow;
             btnMinimizarF1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMinimizarF1.Location = new Point(508, 8);
+            btnMinimizarF1.Location = new Point(501, 10);
             btnMinimizarF1.Name = "btnMinimizarF1";
-            btnMinimizarF1.Size = new Size(24, 23);
+            btnMinimizarF1.Size = new Size(27, 23);
             btnMinimizarF1.TabIndex = 25;
-            btnMinimizarF1.Text = "_";
+            btnMinimizarF1.Text = "__";
             btnMinimizarF1.TextImageRelation = TextImageRelation.TextAboveImage;
             btnMinimizarF1.UseVisualStyleBackColor = false;
             btnMinimizarF1.Click += btnMinimizarF1_Click;
+            btnMinimizarF1.MouseLeave += btnMinimizarF1_MouseLeave;
+            btnMinimizarF1.MouseHover += btnMinimizarF1_MouseHover;
             // 
             // btnCerrarF1
             // 
@@ -73,17 +75,19 @@
             btnCerrarF1.FlatAppearance.MouseDownBackColor = Color.Transparent;
             btnCerrarF1.FlatAppearance.MouseOverBackColor = Color.Transparent;
             btnCerrarF1.FlatStyle = FlatStyle.Flat;
-            btnCerrarF1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCerrarF1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCerrarF1.ForeColor = Color.Snow;
             btnCerrarF1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCerrarF1.Location = new Point(533, 10);
+            btnCerrarF1.Location = new Point(531, 7);
             btnCerrarF1.Name = "btnCerrarF1";
-            btnCerrarF1.Size = new Size(24, 23);
+            btnCerrarF1.Size = new Size(24, 29);
             btnCerrarF1.TabIndex = 24;
             btnCerrarF1.Text = "x";
             btnCerrarF1.TextImageRelation = TextImageRelation.TextAboveImage;
             btnCerrarF1.UseVisualStyleBackColor = false;
             btnCerrarF1.Click += btnCerrarF1_Click;
+            btnCerrarF1.MouseLeave += btnCerrarF1_MouseLeave;
+            btnCerrarF1.MouseHover += btnCerrarF1_MouseHover;
             // 
             // ptbBook
             // 

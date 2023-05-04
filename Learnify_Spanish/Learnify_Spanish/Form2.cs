@@ -111,5 +111,15 @@ namespace Learnify_Spanish
         {
             this.Close();
         }
+
+        private void btnCerrarF2_MouseHover(object sender, EventArgs e)
+        {
+            btnCerrarF2.ForeColor = Color.Red;
+        }
+
+        private void btnCerrarF2_MouseLeave(object sender, EventArgs e)
+        {
+            btnCerrarF2.ForeColor = Color.Snow;
+        }
     }
 }
