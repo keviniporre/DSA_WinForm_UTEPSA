@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            btnMinimize = new Button();
-            btnClose1 = new Button();
+            btnMinimizarF1 = new Button();
+            btnCerrarF1 = new Button();
             ptbBook = new PictureBox();
             lblRegisterCourse = new Label();
             lblToAdd = new Label();
@@ -45,43 +45,45 @@
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             SuspendLayout();
             // 
-            // btnMinimize
+            // btnMinimizarF1
             // 
-            btnMinimize.BackColor = Color.Transparent;
-            btnMinimize.Cursor = Cursors.Hand;
-            btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnMinimize.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnMinimize.FlatStyle = FlatStyle.Flat;
-            btnMinimize.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMinimize.ForeColor = Color.Snow;
-            btnMinimize.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMinimize.Location = new Point(508, 8);
-            btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(24, 23);
-            btnMinimize.TabIndex = 25;
-            btnMinimize.Text = "_";
-            btnMinimize.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnMinimize.UseVisualStyleBackColor = false;
+            btnMinimizarF1.BackColor = Color.Transparent;
+            btnMinimizarF1.Cursor = Cursors.Hand;
+            btnMinimizarF1.FlatAppearance.BorderSize = 0;
+            btnMinimizarF1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMinimizarF1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMinimizarF1.FlatStyle = FlatStyle.Flat;
+            btnMinimizarF1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMinimizarF1.ForeColor = Color.Snow;
+            btnMinimizarF1.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMinimizarF1.Location = new Point(508, 8);
+            btnMinimizarF1.Name = "btnMinimizarF1";
+            btnMinimizarF1.Size = new Size(24, 23);
+            btnMinimizarF1.TabIndex = 25;
+            btnMinimizarF1.Text = "_";
+            btnMinimizarF1.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnMinimizarF1.UseVisualStyleBackColor = false;
+            btnMinimizarF1.Click += btnMinimizarF1_Click;
             // 
-            // btnClose1
+            // btnCerrarF1
             // 
-            btnClose1.BackColor = Color.Transparent;
-            btnClose1.Cursor = Cursors.Hand;
-            btnClose1.FlatAppearance.BorderSize = 0;
-            btnClose1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnClose1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnClose1.FlatStyle = FlatStyle.Flat;
-            btnClose1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose1.ForeColor = Color.Snow;
-            btnClose1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClose1.Location = new Point(533, 10);
-            btnClose1.Name = "btnClose1";
-            btnClose1.Size = new Size(24, 23);
-            btnClose1.TabIndex = 24;
-            btnClose1.Text = "x";
-            btnClose1.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnClose1.UseVisualStyleBackColor = false;
+            btnCerrarF1.BackColor = Color.Transparent;
+            btnCerrarF1.Cursor = Cursors.Hand;
+            btnCerrarF1.FlatAppearance.BorderSize = 0;
+            btnCerrarF1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCerrarF1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCerrarF1.FlatStyle = FlatStyle.Flat;
+            btnCerrarF1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCerrarF1.ForeColor = Color.Snow;
+            btnCerrarF1.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarF1.Location = new Point(533, 10);
+            btnCerrarF1.Name = "btnCerrarF1";
+            btnCerrarF1.Size = new Size(24, 23);
+            btnCerrarF1.TabIndex = 24;
+            btnCerrarF1.Text = "x";
+            btnCerrarF1.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnCerrarF1.UseVisualStyleBackColor = false;
+            btnCerrarF1.Click += btnCerrarF1_Click;
             // 
             // ptbBook
             // 
@@ -207,11 +209,12 @@
             AcceptButton = btnGetStarted;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Black;
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(573, 433);
-            Controls.Add(btnMinimize);
-            Controls.Add(btnClose1);
+            Controls.Add(btnMinimizarF1);
+            Controls.Add(btnCerrarF1);
             Controls.Add(ptbBook);
             Controls.Add(lblRegisterCourse);
             Controls.Add(lblToAdd);
@@ -223,10 +226,12 @@
             Controls.Add(lblHeaderF1);
             Controls.Add(ptbLogo);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Learnify";
+            TransparencyKey = Color.Black;
             ((System.ComponentModel.ISupportInitialize)ptbBook).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             ResumeLayout(false);
@@ -235,8 +240,8 @@
 
         #endregion
 
-        private Button btnMinimize;
-        private Button btnClose1;
+        private Button btnMinimizarF1;
+        private Button btnCerrarF1;
         private PictureBox ptbBook;
         private Label lblRegisterCourse;
         private Label lblToAdd;

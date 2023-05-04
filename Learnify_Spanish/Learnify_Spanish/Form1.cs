@@ -22,5 +22,15 @@ namespace Learnify_Spanish
             }
             else { MessageBox.Show("Por favor escriba un numero valido de cursos", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
+
+        private void btnCerrarF1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimizarF1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

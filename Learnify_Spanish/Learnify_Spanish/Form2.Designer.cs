@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnClose1 = new Button();
-            btnMinimizeF2 = new Button();
+            btnCerrarF2 = new Button();
+            btnMinimizarF2 = new Button();
             lblLibrary = new Label();
             btnLimpiarBusqueda = new Button();
             btnBuscar = new Button();
@@ -72,43 +72,45 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // btnClose1
+            // btnCerrarF2
             // 
-            btnClose1.BackColor = Color.Transparent;
-            btnClose1.Cursor = Cursors.Hand;
-            btnClose1.FlatAppearance.BorderSize = 0;
-            btnClose1.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnClose1.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnClose1.FlatStyle = FlatStyle.Flat;
-            btnClose1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnClose1.ForeColor = Color.Snow;
-            btnClose1.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClose1.Location = new Point(719, 25);
-            btnClose1.Name = "btnClose1";
-            btnClose1.Size = new Size(24, 27);
-            btnClose1.TabIndex = 53;
-            btnClose1.Text = "x";
-            btnClose1.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnClose1.UseVisualStyleBackColor = false;
+            btnCerrarF2.BackColor = Color.Transparent;
+            btnCerrarF2.Cursor = Cursors.Hand;
+            btnCerrarF2.FlatAppearance.BorderSize = 0;
+            btnCerrarF2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnCerrarF2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnCerrarF2.FlatStyle = FlatStyle.Flat;
+            btnCerrarF2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCerrarF2.ForeColor = Color.Snow;
+            btnCerrarF2.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarF2.Location = new Point(719, 25);
+            btnCerrarF2.Name = "btnCerrarF2";
+            btnCerrarF2.Size = new Size(24, 27);
+            btnCerrarF2.TabIndex = 53;
+            btnCerrarF2.Text = "x";
+            btnCerrarF2.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnCerrarF2.UseVisualStyleBackColor = false;
+            btnCerrarF2.Click += btnCerrarF2_Click;
             // 
-            // btnMinimizeF2
+            // btnMinimizarF2
             // 
-            btnMinimizeF2.BackColor = Color.Transparent;
-            btnMinimizeF2.Cursor = Cursors.Hand;
-            btnMinimizeF2.FlatAppearance.BorderSize = 0;
-            btnMinimizeF2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            btnMinimizeF2.FlatAppearance.MouseOverBackColor = Color.Transparent;
-            btnMinimizeF2.FlatStyle = FlatStyle.Flat;
-            btnMinimizeF2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMinimizeF2.ForeColor = Color.Snow;
-            btnMinimizeF2.ImageAlign = ContentAlignment.MiddleLeft;
-            btnMinimizeF2.Location = new Point(688, 28);
-            btnMinimizeF2.Name = "btnMinimizeF2";
-            btnMinimizeF2.Size = new Size(28, 23);
-            btnMinimizeF2.TabIndex = 52;
-            btnMinimizeF2.Text = "__";
-            btnMinimizeF2.TextImageRelation = TextImageRelation.TextAboveImage;
-            btnMinimizeF2.UseVisualStyleBackColor = false;
+            btnMinimizarF2.BackColor = Color.Transparent;
+            btnMinimizarF2.Cursor = Cursors.Hand;
+            btnMinimizarF2.FlatAppearance.BorderSize = 0;
+            btnMinimizarF2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            btnMinimizarF2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            btnMinimizarF2.FlatStyle = FlatStyle.Flat;
+            btnMinimizarF2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMinimizarF2.ForeColor = Color.Snow;
+            btnMinimizarF2.ImageAlign = ContentAlignment.MiddleLeft;
+            btnMinimizarF2.Location = new Point(688, 28);
+            btnMinimizarF2.Name = "btnMinimizarF2";
+            btnMinimizarF2.Size = new Size(28, 23);
+            btnMinimizarF2.TabIndex = 52;
+            btnMinimizarF2.Text = "__";
+            btnMinimizarF2.TextImageRelation = TextImageRelation.TextAboveImage;
+            btnMinimizarF2.UseVisualStyleBackColor = false;
+            btnMinimizarF2.Click += btnMinimizarF2_Click;
             // 
             // lblLibrary
             // 
@@ -490,8 +492,8 @@
             BackgroundImage = Properties.Resources.login_winForm_DSA_utepsa;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(780, 641);
-            Controls.Add(btnClose1);
-            Controls.Add(btnMinimizeF2);
+            Controls.Add(btnCerrarF2);
+            Controls.Add(btnMinimizarF2);
             Controls.Add(lblLibrary);
             Controls.Add(btnLimpiarBusqueda);
             Controls.Add(btnBuscar);
@@ -531,8 +533,8 @@
 
         #endregion
 
-        private Button btnClose1;
-        private Button btnMinimizeF2;
+        private Button btnCerrarF2;
+        private Button btnMinimizarF2;
         private Label lblLibrary;
         private Button btnLimpiarBusqueda;
         private Button btnBuscar;

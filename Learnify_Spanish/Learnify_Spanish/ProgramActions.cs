@@ -54,12 +54,12 @@ namespace Learnify_Spanish
         {
             for (int i = 0; i < cantidadColumnas; i++)
             {
-                for (int j = getIndiceFilaSeleccionada() ; j < ultimaFila ; j++)
+                for (int j = getIndiceFilaSeleccionada() ; j <= ultimaFila ; j++)
                 {
                     matriz[i, j] = matriz[i, j + 1];
                 }
             }
-            //Vacia o asigna a ceros el valor de la ultima fila de la matriz
+            //Vacia los valores de la ultima fila de la matriz
             for (int i = 0; i < cantidadColumnas ; i++)
             {
                 matriz[i, ultimaFila] = string.Empty;
