@@ -29,92 +29,72 @@ namespace Learnify_Spanish
             cantidadColumnas = 6;
             primerFila = 0;
             ultimaFila = -1;
-            maximoDeFilas = getNumberOfCourses();
+            maximoDeFilas = getNumeroDeCursos();
             contenedor = new string[cantidadColumnas];
             matriz = new string[cantidadColumnas, maximoDeFilas];
             estaMatrizLlena = false;
         }
-        //Declaracion Metodos SET Form 1
-        //Para asignar el numero de cursos verifica que sea un numero y mayor que cero.
-        public void setNumberOfCourses(string txtNumberCourses)
-        {
-            if (isGreaterThanZero(txtNumberCourses))
-            {
-                numberOfCourses = Convert.ToInt16(txtNumberCourses);
-            }
-            else { MessageBox.Show("Por favor escriba un numero valido de cursos", "Learnify - Cursos Online", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-        //Metodo Get que retorna el numero de cursos.
-        public int getNumberOfCourses() { return numberOfCourses; }
+        //Declaracion Metodos SET
+        public void setNumeroDeCursos(string txtNumeroDeCursos) { numeroDeCursos = Convert.ToInt32(txtNumeroDeCursos); }
+        public void setId(TextBox txtId) { idCurso = txtId.Text; }
+        public void setNombre(string name) { nombreCurso = name; }
+        public void setInstructor(string instructor) { instructorCurso = instructor; }
+        public void setCategoria(string category) { categoriaCurso = category; }
+        public void setDuracion(string length) { duracionCurso = length; }
+        public void setPrecio(string price) { precioCurso = price; }
+        public void setIndiceFilaSeleccionada(int selectedRowIndex) { indiceFilaSeleccionada = selectedRowIndex; }
+        public void setIndiceFilaBuscar(int rowIndex) { indiceFilaBuscar = rowIndex; }
 
-
-        //Declaracion Metodos SET Form 2
-        public void setId(TextBox txtId) { this.idValue = txtId.Text; }
-        public void setName(string name) { this.nameValue = name; }
-        public void setInstructor(string instructor) { this.instructorValue = instructor; }
-        public void setCategory(string category) { this.categoryValue = category; }
-        public void setLength(string length) { this.lengthValue = length; }
-        public void setPrice(string price) { this.priceValue = price; }
-        public void setselectedRowIndex(int selectedRowIndex) { this.selectedRowIndex = selectedRowIndex; }
-        public void setSearchRowIndex(int rowIndex) { this.searchRowIndex = rowIndex; }
-
-
-        public string getId() { return idValue; }
-        public string getName() { return nameValue; }
-        public string getInstructor() { return instructorValue; }
-        public string getCategory() { return categoryValue; }
-        public string getLength() { return lengthValue; }
-        public string getPrice() { return priceValue; }
-        public int getselectedRowIndex() { return selectedRowIndex; }
-        public int getSearchRowIndex() { return searchRowIndex; }
+        //Declaracion Metodos GET
+        public int getNumeroDeCursos() { return numeroDeCursos; }
+        public string getId() { return idCurso; }
+        public string getNombre() { return nombreCurso; }
+        public string getInstructor() { return instructorCurso; }
+        public string getCategoria() { return categoriaCurso; }
+        public string getDuracion() { return duracionCurso; }
+        public string getPrecio() { return precioCurso; }
+        public int getIndiceFilaSeleccionada() { return indiceFilaSeleccionada; }
+        public int getIndiceFilaBuscar() { return indiceFilaBuscar; }
 
         //Metodos de Validacion
-        //Verifica si se puede convertir a un entero, de no poderse devuelve null.
-        public int? ParseInt(string str)
+        //Verifica si puede convertir a entero, de no poderse devuelve null.
+        public int? intentaConvertirEntero(string numeroIntentarConvertir)
         {
-            int result;
-            if (int.TryParse(str, out result)) { return result; }
+            int resultado;
+            if (int.TryParse(numeroIntentarConvertir, out resultado)) { return resultado; }
             else { return null; }
         }
-        //Verifica si es un numero, retorna verdadero/falso
-        public bool isNumber(string number)
+        //Verifica si el numero es mayor que cero.
+        public bool esMayorQueCero(string numeroParaEvaluar)
         {
-            int? parsedInt = ParseInt(number);
-            if (parsedInt.HasValue) { return true; }
-            else { return false; }
-        }
-        //Verifica si el numero es mayor que cero
-        public bool isGreaterThanZero(string number)
-        {
-            if (isNumber(number))
+            int? numeroConvertido = intentaConvertirEntero(numeroParaEvaluar);
+            if (numeroConvertido.HasValue)
             {
-                if (Convert.ToInt16(number) > 0) { return true; }
-                else { return false; }
+                if (numeroConvertido > 0) { return true; }
             }
             return false;
         }
-        //Verifica si el Texbox esta vacio
-        public bool isTextboxEmpty(TextBox txtEmpty) { return string.IsNullOrEmpty(txtEmpty.Text); }
-        //Verifica si el Texbox esta lleno de espacios
-        public bool isTextboxSpaces(TextBox txtSpaces) { return string.IsNullOrWhiteSpace(txtSpaces.Text); }
+        //Verifica si un Texbox esta vacio
+        public bool estaTextboxVacio(TextBox txtParaEvaluar)
+        {
+            if (string.IsNullOrEmpty(txtParaEvaluar.Text) || string.IsNullOrWhiteSpace(txtParaEvaluar.Text)) { return true; }
+            else { return false; }
+        }
         //Verifica si algun textbox esta vacio o lleno de espacios
-        public bool isAnyTextboxEmpty(params TextBox[] textboxes)
+        public bool estaAlgunTextboxVacio(params TextBox[] textboxes)
         {
             foreach (var txtbox in textboxes)
             {
-                if (isTextboxEmpty(txtbox) || isTextboxSpaces(txtbox)) { return true; }
+                if (estaTextboxVacio(txtbox)) { return true; }
             }
             return false;
         }
         //Devuelve el textbox que esta vacio de estar todos llenos devuelve null
-        public TextBox getEmptyTextboxName(params TextBox[] textBoxes)
+        public TextBox? getNombreTextboxVacio(params TextBox[] textBoxes)
         {
             foreach (var textbox in textBoxes)
             {
-                if (isTextboxEmpty(textbox) || isTextboxSpaces(textbox))
-                {
-                    return textbox;
-                }
+                if (estaTextboxVacio(textbox)) { return textbox; }
             }
             return null;
         }
